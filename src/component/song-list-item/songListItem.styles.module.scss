@@ -1,0 +1,29 @@
+.SongListItemBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background: var(--box-color);
+  transition: background 0.2s ease-in-out;
+  .SongListItemBoxLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .SongListItemBoxPlayBtn {
+      margin: 0 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .SongListItemBoxRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &:hover {
+    background: var(--box-hover-color);
+  }
+}

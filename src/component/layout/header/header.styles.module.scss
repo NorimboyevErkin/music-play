@@ -1,0 +1,36 @@
+@mixin center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.HeaderBox {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  background: var(--layout-color);
+  .HeaderBoxGrid {
+    @include center();
+    padding: 0.5rem 2rem;
+    .HeaderAction {
+      @include center();
+      column-gap: 0.5rem;
+      .HeaderMenuBtn {
+        font-size: 1.5rem;
+        @media (min-width: 900px) {
+          display: none !important;
+        }
+      }
+    }
+    .HeaderChild {
+      min-width: 300px;
+      max-width: 100%;
+    }
+    .HeaderAccountInfo {
+      @include center();
+      column-gap: 1rem;
+    }
+  }
+}

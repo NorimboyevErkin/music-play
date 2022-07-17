@@ -1,0 +1,31 @@
+.SongCardPlayerBox {
+  z-index: 9;
+  background: var(--box-color);
+  padding: .5rem 1rem;
+  border-top: 1px solid var(--box-hover-color);
+  .SongCardPlayerGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 2rem;
+
+    .SongCardPlayerInfo{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .SongCardPlayerAction {
+      z-index: 2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+    .SongCardPlayerOptions {
+      z-index: 2;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.MyInput {
+  background: var(--white);
+  padding: 0.1rem 1rem;
+  border-radius: 26px;
+  .MyInputLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  input {
+    all: unset;
+    width: 100%;
+    min-width: 300px;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: 0.7rem;
+    &::placeholder {
+      color: var(--muted-text);
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+}

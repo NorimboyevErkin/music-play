@@ -1,0 +1,24 @@
+.RangeBox {
+  margin: 10px;
+ 
+  .ant-slider-rail {
+    background: #535353 !important;
+  }
+  .ant-slider-track {
+    background: #a7a7a7 !important;
+  }
+  .ant-slider-handle {
+    width: 10px !important;
+    height: 10px !important;
+    margin-top: -4px !important;
+    background: var(--white);
+    border: none !important;
+    display: none;
+  }
+  &:hover > .ant-slider-track {
+    background: var(--green) !important;
+  }
+  &:hover > .ant-slider-handle {
+    display: inline-block !important;
+  }
+}

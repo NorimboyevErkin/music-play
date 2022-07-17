@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+:root {
+  --green: #1cb955;
+  --main-section-color: linear-gradient(#1f1f1f, #121212);
+  --empty-music-player-color: linear-gradient(#af2896, #509bf5);
+  --muted-text: #b3b3b3;
+  --white-text:#ffff;
+  --dark-text:#181818;
+  --white:#ffff;
+  --box-color: #181818;
+  --box-hover-color: #272727;
+  --layout-color: #070707;
+  --side-menu:#000000;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Urbanist", sans-serif !important;
+  background: var(--body) !important;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #535353 !important;
+}
+.title {
+  background: linear-gradient(286.17deg, #9610ff 0%, #af48ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.ant-tooltip-placement-top {
+  display: none !important;
+}

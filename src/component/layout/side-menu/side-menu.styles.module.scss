@@ -1,0 +1,76 @@
+.SideMenuBox {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 256px;
+  min-width: 270px;
+  background-color: var(--side-menu);
+  position: relative !important;
+  left: none !important;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: left 0.5s ease-in-out;
+  @media (max-width: 900px) {
+    // display: none;
+    position: fixed !important;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+  }
+  @media (min-width: 900px) {
+    transition: left 0s ;
+    position: relative !important;
+    left: 0 !important;
+  }
+  .SideMenuBoxLogo {
+    width: 100%;
+  }
+  .SideMenuBoxNavbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+    margin-top: 1rem;
+    width: 100%;
+    li {
+      padding: 0.4rem 0;
+      .activeLink {
+        color: var(--white-text);
+      }
+      a {
+        display: inline-block;
+        color: var(--muted-text);
+        font-weight: 500;
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 1rem;
+        transition: color 0.2s ease-in-out;
+      }
+      &:hover {
+        a {
+          color: var(--white-text);
+        }
+      }
+    }
+  }
+}
+.Shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 11;
+  display: none;
+  @media (min-width: 900px) {
+    display: none !important;
+  }
+}
