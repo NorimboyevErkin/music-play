@@ -12,5 +12,10 @@
   }
   .ControlBoxRange {
     display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+      color: var(--muted-text);
+    }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "Func": "kelgan son {{num}} wu",
+  "Home": "Дом",
+  "Search": "Поиск",
+  "Library": "Библиотека",
+  "Play-list": "Плейлист",
+  "Liked_song": "Понравилась песня",
+  "Empty_album": "это пусто, пожалуйста, выберите альбом !",
+
+  "Company": "Компания",
+  "About": "O программе",
+  "Jops": "Работа",
+  "For_the_record": "Для записи",
+
+  "Communities": "Сообщества",
+  "For_artists": "Для художников",
+  "Developers": "Разработчики",
+  "Advertising": "Реклама",
+  "Investors": "Инвесторы",
+  "Vendors": "Продавцы",
+
+  "Useful_links": "Полезные ссылки",
+  "Support": "Поддержка",
+  "Free_mobile_app": "Бесплатное мобильное приложение",
+
+  "Legal": "Юридический",
+  "Privacy_center": "Центр конфиденциальности",
+  "Privacy_policy": "Политика конфиденциальности",
+  "Cookies": "Файлы cookie",
+  "About_ads": "O рекламе",
+
+  "Title": "Заголовок",
+  "Album": "Альбом"
+}

@@ -1,16 +1,14 @@
-export function Play({ color = "white", width = "28", height = "28" }) {
+export function Play({ color = "white", width = "25", height = "25" }) {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox="0 0 28 28"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      fill={color}
+      className="bi bi-play-fill"
+      viewBox="0 0 16 16"
     >
-      <path
-        d="M19.6176 14.6274C20.1275 14.3486 20.1275 13.6514 19.6176 13.3726L8.14706 7.09815C7.63726 6.81928 7 7.16786 7 7.72559V20.2744C7 20.8321 7.63725 21.1807 8.14706 20.9019L19.6176 14.6274Z"
-        fill={color}
-      />
+      <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
     </svg>
   );
 }
@@ -247,7 +245,7 @@ export function HomeFill({ color = "white", width = "25", height = "25" }) {
     </svg>
   );
 }
-export function Search({ color = "white", width = "25", height = "25" }) {
+export function Search({ color = "black", width = "25", height = "25" }) {
   return (
     <svg
       width={width}
@@ -307,11 +305,11 @@ export function LibraryFill({ color = "white", width = "25", height = "25" }) {
       width={width}
       height={height}
       viewBox="0 0 32 32"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="3" y="3" width="3" height="26" rx="1.5" fill="white" />
-      <rect x="11" y="3" width="3" height="26" rx="1.5" fill="white" />
+      <rect x="3" y="3" width="3" height="26" rx="1.5" fill={color} />
+      <rect x="11" y="3" width="3" height="26" rx="1.5" fill={color} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -333,7 +331,7 @@ export function LibraryPlus({ color = "white", width = "25", height = "25" }) {
       width={width}
       height={height}
       viewBox="0 0 32 32"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -345,7 +343,11 @@ export function LibraryPlus({ color = "white", width = "25", height = "25" }) {
     </svg>
   );
 }
-export function LikedSongsIcon({ color = "white", width = "25", height = "25" }) {
+export function LikedSongsIcon({
+  color = "white",
+  width = "25",
+  height = "25",
+}) {
   return (
     <svg
       width={width}

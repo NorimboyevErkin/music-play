@@ -1,0 +1,34 @@
+{
+  "Func": "kelgan son {{num}} wu",
+  "Home": "Uy",
+  "Search": "Qidirmoq",
+  "Library": "Kutubxona",
+  "Play-list": "PlayList",
+  "Liked_song": "Sevimli Qo'shiq",
+  "Empty_album": "bu bo'sh, Iltmos albomni tanlang !",
+
+  "Company": "Kompaniya",
+  "About": "Haqida",
+  "Jops": "Ishlar",
+  "For_the_record": "Rekord uchun",
+
+  "Communities": "Jamiyatlar",
+  "For_artists": "Artistlar uchun",
+  "Developers": "Ishlab chiquvchilar",
+  "Advertising": "Reklama",
+  "Investors": "Investorlar",
+  "Vendors": "Sotuvchilar",
+
+  "Useful_links": "Foydali havolalar",
+  "Support": "Qo'llab-quvvatlash",
+  "Free_mobile_app": "Bepul mobil ilova",
+
+  "Legal": "Huquqiy",
+  "Privacy_center": "Maxfiylik markazi",
+  "Privacy_policy": "Maxfiylik siyosati",
+  "Cookies": "Cookie",
+  "About_ads": "Reklamalar haqida",
+
+  "Title": "Sarlavha",
+  "Album": "Albom"
+}

@@ -4,17 +4,17 @@ import styled from "styled-components";
 const ImgCard = memo(styled.div`
   width: ${({ width }) =>
     width && width === "large"
-      ? "200px"
+      ? "400px"
       : width === "medium"
-      ? "182px"
+      ? "168px"
       : width === "small"
       ? "60px"
       : width};
   height: ${({ height }) =>
     height && height === "large"
-      ? "200px"
+      ? "400px"
       : height === "medium"
-      ? "182px"
+      ? "168px"
       : height === "small"
       ? "60px"
       : height};

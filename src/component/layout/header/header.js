@@ -1,44 +1,44 @@
-import React, { useContext, useState } from "react";
-import { Back, Close, Forward } from "../../../assets/icon/icon";
+import React, { useContext, memo } from "react";
+import { Back, Forward } from "../../../assets/icon/icon";
 import { Btn } from "../../../styles-components/button";
-import { Menu } from "antd";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./header.styles.module.scss";
-import MyDropdown from "../../dropdown/dropdown";
 import Input from "../../input";
 import { AiOutlineMenu } from "react-icons/ai";
+import { MdTranslate } from "react-icons/md";
+import Dropdown from "../../dropdown/dropdown";
+import { language } from "../../../utils/data/language";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import { DropMenu } from "../../../utils/context";
-import Logo from "../../logo/logo";
 
-const menu = (
-  <Menu
-    items={[
-      {
-        label: <a href="#">1st menu item</a>,
-        key: "0",
-      },
-      {
-        label: <a href="#">2nd menu item</a>,
-        key: "1",
-      },
-      {
-        type: "divider",
-      },
-      {
-        label: "3rd menu item",
-        key: "3",
-      },
-    ]}
-  />
-);
+function Header({ changeBg }) {
+  const { t, i18n } = useTranslation();
 
-function Header() {
-  const { isOpenDropMenu } = useContext(DropMenu);
-  const { openFunc } = isOpenDropMenu;
+  const { dropSide } = useContext(DropMenu);
+  const { OpenDropMenu } = dropSide;
+  const { openFunc } = OpenDropMenu;
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  const menu = (
+    <ul>
+      {language.map(({ code, name, icon }) => (
+        <li
+          onClick={() => {
+            i18next.changeLanguage(code);
+          }}
+          key={code}
+          className={i18n.language === code ? "active-dropdawn" : null}
+        >
+          {icon}
+          {name}
+        </li>
+      ))}
+    </ul>
+  );
   return (
-    <header className={styles.HeaderBox}>
+    <header className={changeBg ? styles.HeaderStickyBox : styles.HeaderBox}>
       <div className={styles.HeaderBoxGrid}>
         <div className={styles.HeaderAction}>
           <Btn
@@ -69,24 +69,25 @@ function Header() {
 
           {pathname.startsWith("/search") ? (
             <div className={styles.HeaderChild}>
-              <Input />
+              <Input color="var(--dark-text)" />
             </div>
           ) : null}
         </div>
 
         <div className={styles.HeaderAccountInfo}>
-          {/* <MyDropdown
-            menu={menu}
-            imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3chMQpxbCYKZECsoHYIuSztdo8KXb2pSp1g&usqp=CAU"
-          /> */}
-          <Btn type="primary" bgColor="transparent" color="var(--muted-text)">
-            Sign Up
-          </Btn>
-          <Btn type="primary">Log In</Btn>
+          <Dropdown menu={menu} placement="bottomRight">
+            <Btn
+              type="link"
+              className={styles.HeaderMenuBtn}
+              color="var(--muted-text)"
+            >
+              <MdTranslate />
+            </Btn>
+          </Dropdown>
         </div>
       </div>
     </header>
   );
 }
 
-export default Header;
+export default memo(Header);

@@ -1,6 +1,7 @@
 .RangeBox {
   margin: 10px;
- 
+  width: 100%;
+  min-width: 50px;
   .ant-slider-rail {
     background: #535353 !important;
   }

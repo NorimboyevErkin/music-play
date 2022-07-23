@@ -1,9 +1,10 @@
+import { memo } from "react";
 import styles from "./loading.styles.module.scss";
-function Loading({ type, size }) {
+function Loading({ type , ...others}) {
   return (
     <>
       {type === "song-effect" ? (
-        <div className={styles.LoadingSongEffectBox} title="4">
+        <div className={styles.LoadingSongEffectBox} title="4" {...others}>
           <svg
             version="1.1"
             id="Layer_1"
@@ -63,7 +64,7 @@ function Loading({ type, size }) {
           </svg>
         </div>
       ) : (
-        <div className={styles.LoadingBox}>
+        <div className={styles.LoadingBox} {...others}>
           <div className={styles.LoadingBounce1} />
           <div className={styles.LoadingBounce2} />
           <div className={styles.LoadingBounce3} />
@@ -73,4 +74,4 @@ function Loading({ type, size }) {
   );
 }
 
-export default Loading;
+export default memo(Loading);

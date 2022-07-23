@@ -6,7 +6,7 @@ function MyInput({ placeholder = "Search..." }) {
   return (
     <div className={styles.MyInput}>
       <label className={styles.MyInputLabel}>
-        <Search color="var(--dark-text)" />
+        <Search  />
         <input type="text" placeholder={placeholder} />
       </label>
     </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useEffect } from "react";
+import React, { useRef, useContext, useEffect, memo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
   Home,
@@ -14,13 +14,15 @@ import { DropMenu } from "../../../utils/context";
 import Line from "../../line/line";
 import Logo from "../../logo/logo";
 import styles from "./side-menu.styles.module.scss";
+import { useTranslation } from "react-i18next";
 function SideMenu() {
+  const { t } = useTranslation();
   const { pathname } = useLocation();
   const dropMenu = useRef();
   const Shadow = useRef();
 
-  const { setisOpenDropMenu } = useContext(DropMenu);
-
+  const { dropSide } = useContext(DropMenu);
+  const { setOpenDropMenu} = dropSide;
   const openFunc = () => {
     dropMenu.current.style.left = "0";
     Shadow.current.style.display = "inline-block";
@@ -31,7 +33,7 @@ function SideMenu() {
     Shadow.current.style.display = "none";
   };
   useEffect(() => {
-    setisOpenDropMenu({
+    setOpenDropMenu({
       openFunc: openFunc,
       closeFunc: closeFunc,
     });
@@ -53,39 +55,39 @@ function SideMenu() {
             <li>
               {pathname === "/" || pathname === "" || pathname === "/#" ? (
                 <NavLink to="/" className={styles.activeLink}>
-                  <HomeFill />
-                  Home
+                  <HomeFill color="var(--white-text)" />
+                  {t("Home")}
                 </NavLink>
               ) : (
                 <NavLink to="/">
-                  <Home />
-                  Home
+                  <Home color="var(--white-text)" />
+                  {t("Home")}
                 </NavLink>
               )}
             </li>
             <li>
               {pathname.startsWith("/search") ? (
                 <NavLink to="/search" className={styles.activeLink}>
-                  <SearchFill />
-                  Search
+                  <SearchFill color="var(--white-text)" />
+                  {t("Search")}
                 </NavLink>
               ) : (
                 <NavLink to="/search">
-                  <Search />
-                  Search
+                  <Search color="var(--white-text)" />
+                  {t("Search")}
                 </NavLink>
               )}
             </li>
             <li>
               {pathname.startsWith("/library") ? (
                 <NavLink to="/library" className={styles.activeLink}>
-                  <LibraryFill />
-                  Your Library
+                  <LibraryFill color="var(--white-text)" />
+                  {t("Library")}
                 </NavLink>
               ) : (
                 <NavLink to="/library">
-                  <Library />
-                  Your Library
+                  <Library color="var(--white-text)" />
+                  {t("Library")}
                 </NavLink>
               )}
             </li>
@@ -100,8 +102,8 @@ function SideMenu() {
                   pathname.startsWith("/play-list") ? styles.activeLink : null
                 }
               >
-                <LibraryPlus />
-                Create PlayList
+                <LibraryPlus color="var(--white-text)" />
+                {t("Play-list")}
               </NavLink>
             </li>
             <li>
@@ -112,7 +114,7 @@ function SideMenu() {
                 }
               >
                 <LikedSongsIcon />
-                Liked Songs
+                {t("Liked_song")}
               </NavLink>
             </li>
           </ul>
@@ -124,4 +126,4 @@ function SideMenu() {
   );
 }
 
-export default SideMenu;
+export default memo(SideMenu);

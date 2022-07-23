@@ -4,13 +4,13 @@ export const FooterNav = [
     children: [
       { name: "About", url: "#" },
       { name: "Jops", url: "#" },
-      { name: "For the Record", url: "#" },
+      { name: "For_the_record", url: "#" },
     ],
   },
   {
     name: "Communities",
     children: [
-      { name: "For Artists", url: "#" },
+      { name: "For_artists", url: "#" },
       { name: "Developers", url: "#" },
       { name: "Advertising", url: "#" },
       { name: "Investors", url: "#" },
@@ -18,10 +18,10 @@ export const FooterNav = [
     ],
   },
   {
-    name: "Useful links",
+    name: "Useful_links",
     children: [
       { name: "Support", url: "#" },
-      { name: "Free Mobile App", url: "#" },
+      { name: "Free_mobile_app", url: "#" },
     ],
   },
 ];
@@ -31,11 +31,11 @@ export const FooterNavInfo = [
     url: "#",
   },
   {
-    name: "Privacy Center",
+    name: "Privacy_center",
     url: "#",
   },
   {
-    name: "Privacy Policy",
+    name: "Privacy_policy",
     url: "#",
   },
   {
@@ -43,7 +43,7 @@ export const FooterNavInfo = [
     url: "#",
   },
   {
-    name: "About Ads",
+    name: "About_ads",
     url: "#",
   },
 ];

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,memo} from "react";
 import { Heart, HeartFill } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 
@@ -16,4 +16,4 @@ function Like({ islike }) {
   );
 }
 
-export default Like;
+export default memo(Like);

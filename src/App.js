@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Route, Routes } from "react-router-dom";
 import { AudioMusic, CurrentMusic, DropMenu, MyContext } from "./utils/context";
 import Error404 from "./pages/Error404";
@@ -9,6 +9,41 @@ import Library from "./pages/library";
 import PlayList from "./pages/playlist";
 import LikedSongs from "./pages/liked-songs";
 import "antd/dist/antd.css";
+///////////////////////
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector"; // browswer eslab qoliw uchun
+import HttpApi from "i18next-http-backend"; // dynamic file bn iwlaw
+
+i18n
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .use(HttpApi)
+  .init({
+    supportedLngs: ["en", "ru", "uz"],
+    fallbackLng: "en",
+    detection: {
+      order: [
+        "querystring",
+        "cookie",
+        "localStorage",
+        "sessionStorage",
+        "navigator",
+        "htmlTag",
+        "path",
+        "subdomain",
+      ],
+      caches: ["cookie"],
+    },
+    backend: {
+      loadPath: "/assets/locales/{{lng}}/translation.json",
+    },
+    react: {
+      useSuspense: false,
+    },
+  });
+
+//////////////////////
 function App() {
   const [myObj, setmyObj] = useState({
     music: {
@@ -19,17 +54,28 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
   const [durationTime, setdurationTime] = useState(0);
   const [seekValue, setSeekValue] = useState(0);
-  const [isOpenDropMenu, setisOpenDropMenu] = useState({});
-  const [currentMusic, setcurrentMusic] = useState(
-    "https://cdns-preview-e.dzcdn.net/stream/c-efe84e57a61d55f279c9f0c988eb4534-6.mp3"
-  );
+  const [OpenDropMenu, setOpenDropMenu] = useState({});
+  const [OpenFullPlayer, setOpenFullPlayer] = useState({});
+  const [currentMusic, setcurrentMusic] = useState({
+    imgUrl: null,
+    title: null,
+    description: null,
+    audioUrl: null,
+  });
   const [isPlay, setisPlay] = useState(false);
-  const [audioMusic, setaudioMusic] = useState(null);
-  const audio = new Audio();
+  const audioMusic = useRef(new Audio());
+  const [volume, setvolume] = useState(audioMusic.current.volume);
+  const [speed, setspeed] = useState(audioMusic.current.playbackRate);
+
   return (
     <>
       <MyContext.Provider value={myObj}>
-        <DropMenu.Provider value={{ isOpenDropMenu, setisOpenDropMenu }}>
+        <DropMenu.Provider
+          value={{
+            dropSide: { OpenDropMenu, setOpenDropMenu },
+            fullPlayer: { OpenFullPlayer, setOpenFullPlayer },
+          }}
+        >
           <CurrentMusic.Provider
             value={{
               curMusic: { currentMusic, setcurrentMusic },
@@ -37,9 +83,11 @@ function App() {
               curTime: { currentTime, setCurrentTime },
               curSeekValue: { seekValue, setSeekValue },
               curDrationTime: { durationTime, setdurationTime },
+              curVolume: { volume, setvolume },
+              curSpeed: { speed, setspeed },
             }}
           >
-            <AudioMusic.Provider value={{ audioMusic, setaudioMusic }}>
+            <AudioMusic.Provider value={audioMusic.current}>
               <Layout>
                 <Routes>
                   <Route path="/" element={<Home />} />

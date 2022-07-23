@@ -1,0 +1,35 @@
+.AlbumListItemPageBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  .AlbumListItemPageBoxShowCase {
+    width: 100%;
+    padding:1rem 2rem;
+  }
+  .AlbumListItemPageSongs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+
+    .AlbumListItemPageSongsAction {
+      width: 100%;
+      display: flex;
+      padding:0 1rem 1rem 1rem;
+      justify-content: space-between;
+      align-items: center;
+
+      .AlbumListItemPageSongsControll{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: .5rem;
+      }
+    }
+  }
+}

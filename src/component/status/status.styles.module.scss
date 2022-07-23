@@ -1,0 +1,13 @@
+.StatusBox {
+  padding:2rem 1rem;
+  height: calc(100vh - 145px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 300px;
+    object-fit: contain;
+  }
+}

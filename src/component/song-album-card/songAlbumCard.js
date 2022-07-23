@@ -1,16 +1,41 @@
-import React, { memo, useState } from "react";
-import { Pause, PauseFill, PauseFillGreen, Play, PlayFill, PlayFillGreen } from "../../assets/icon/icon";
+import React, { memo, useContext, useState, useEffect } from "react";
+import { Pause, Play } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songAlbumCard.styles.module.scss";
+import { CurrentMusic } from "../../utils/context";
+import { ImgCard } from "../../styles-components/img-card";
 
-function SongAlbumCard({ imgUrl, title, description, imgBorder = "4px" }) {
-  const [isPlay, setisPlay] = useState(false);
+function SongAlbumCard(data) {
+  const { id, title, description, imgUrl, audioUrl } = data;
+  const { curMusic, curPlay } = useContext(CurrentMusic);
+  const { currentMusic, setcurrentMusic } = curMusic;
+  const { isPlay, setisPlay } = curPlay;
+  const [play, setplay] = useState(false);
+
+  const controll = async (status) => {
+    if (status === "pause") {
+      await setisPlay(false);
+      setplay(false);
+    } else {
+      await setisPlay(false);
+      await setcurrentMusic(data);
+      await setisPlay(true);
+      setplay(true);
+    }
+  };
+
+  useEffect(() => {
+    setplay(currentMusic.audioUrl === audioUrl);
+    // return () => {
+    //   setplay(false);
+    // };
+  }, [isPlay]);
   return (
     <div className={styles.songCardBox}>
       <div className={styles.songCardBoxHeader}>
-        <img src={imgUrl} alt={title} className={styles.songCardBoxImg} />
-        {isPlay ? (
+        <ImgCard imgUrl={imgUrl} height="medium" width="medium" border="4px" />
+        {play ? (
           <Btn
             type="circle-primary"
             className={styles.songCardBoxButton}
@@ -18,7 +43,7 @@ function SongAlbumCard({ imgUrl, title, description, imgBorder = "4px" }) {
             height="45px"
             bgColor="var(--green)"
             onClick={() => {
-              setisPlay(false);
+              controll("pause");
             }}
           >
             <Pause color="black" />
@@ -31,17 +56,20 @@ function SongAlbumCard({ imgUrl, title, description, imgBorder = "4px" }) {
             height="45px"
             bgColor="var(--green)"
             onClick={() => {
-              setisPlay(true);
+              controll("play");
             }}
           >
             <Play color="black" />
           </Btn>
         )}
       </div>
-      <Title line={1} weight="bolder">
-        {title}
-      </Title>
-      <Description weight="bolder">{description}</Description>
+      <div className={styles.songCardBoxFooter}>
+        <Title line={1} weight="bolder">
+          {title}
+        </Title>
+        <br />
+        <Description weight="bolder">{description}</Description>
+      </div>
     </div>
   );
 }

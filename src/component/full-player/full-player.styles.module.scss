@@ -1,0 +1,73 @@
+@mixin center {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.FullPlayerBox {
+  z-index: 20;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: var(--main-section-color);
+  transition: bottom 0.5s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .FullPlayerBoxTopNav {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .FullPlayerBoxGrid {
+    padding: 1rem;
+    min-height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: stretch;
+
+    .FullPlayerBoxTitle {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .FullPlayerBoxInfo {
+      // padding: 1rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      img {
+        margin-bottom: 1rem;
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+        @media (max-width: 400px) {
+        width: 100%;
+        }
+        @media (max-height: 600px) {
+        height: 250px;
+        }
+      }
+      .FullPlayerBoxOptions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .FullPlayerBoxAction {
+      padding-top: 1rem;
+    }
+  }
+}

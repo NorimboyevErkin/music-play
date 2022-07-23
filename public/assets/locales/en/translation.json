@@ -1,0 +1,34 @@
+{
+  "Func": "kelgan son {{num}} wu",
+  "Home": "Home",
+  "Search": "Search",
+  "Library": "Library",
+  "Play_list": "PlayList",
+  "Liked_song": "Liked Song",
+  "Empty_album": "This is empty , please choose album !",
+
+  "Company": "Company",
+  "About": "About",
+  "Jops": "Jobs",
+  "For_the_record": "For the Record",
+
+  "Communities": "Communities",
+  "For_artists": "For Artists",
+  "Developers": "Developers",
+  "Advertising": "Advertising",
+  "Investors": "Investors",
+  "Vendors": "Vendors",
+
+  "Useful_links": "Useful links",
+  "Support": "Support",
+  "Free_mobile_app": "Free Mobile App",
+
+  "Legal": "Legal",
+  "Privacy_center": "Privacy Center",
+  "Privacy_policy": "Privacy Policy",
+  "Cookies": "Cookies",
+  "About_ads": "About Ads",
+
+  "Title":"Title",
+  "Album":"Album"
+}

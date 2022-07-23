@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { ImgCard } from "../../styles-components/img-card";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songCardInfo.styles.module.scss";
@@ -19,4 +20,4 @@ function SongCardInfo({ imgUrl, title, description }) {
   );
 }
 
-export default SongCardInfo;
+export default memo(SongCardInfo);

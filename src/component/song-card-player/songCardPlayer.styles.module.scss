@@ -1,20 +1,26 @@
 .SongCardPlayerBox {
-  z-index: 9;
+  z-index: 13;
   background: var(--box-color);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-top: 1px solid var(--box-hover-color);
   .SongCardPlayerGrid {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     column-gap: 2rem;
 
-    .SongCardPlayerInfo{
+    .SongCardPlayerInfo {
+      flex: .3;
       display: flex;
       align-items: center;
       justify-content: flex-start;
     }
     .SongCardPlayerAction {
+      flex: .5;
+      width: 100%;
       z-index: 2;
       display: flex;
       justify-content: space-around;
@@ -22,10 +28,21 @@
       flex-direction: column;
     }
     .SongCardPlayerOptions {
+      flex: .3;
       z-index: 2;
       display: inline-flex;
       justify-content: flex-end;
       align-items: center;
     }
   }
+}
+.SongCardPlayerBoxEmpty {
+  z-index: 9;
+  background: var(--empty-music-player-color);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  min-height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

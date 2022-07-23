@@ -4,23 +4,28 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.4rem 1rem;
-  background: var(--box-color);
+  background: transparent;
   transition: background 0.2s ease-in-out;
   .SongListItemBoxLeft {
+    flex: 0.4;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-
-    .SongListItemBoxPlayBtn {
-      margin: 0 1rem 0 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
   .SongListItemBoxRight {
+    padding-right: 1rem;
+    flex: 0.3;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .SongListItemBoxCenter {
+    flex: 0.3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   &:hover {

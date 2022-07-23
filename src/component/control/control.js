@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, memo} from "react";
 import {
   Next,
   PauseFill,
@@ -12,32 +12,42 @@ import Range from "../range/range";
 import styles from "./control.styles.module.scss";
 import { AudioMusic, CurrentMusic } from "../../utils/context";
 
-function Control({ audioUrl }) {
+function Control() {
   const { curMusic, curPlay, curSeekValue, curTime, curDrationTime } =
     useContext(CurrentMusic);
-  const { audioMusic, setaudioMusic } = useContext(AudioMusic);
+  const  audioMusic = useContext(AudioMusic);
   const { isPlay, setisPlay } = curPlay;
   const { currentMusic, setcurrentMusic } = curMusic;
   const { currentTime, setCurrentTime } = curTime;
   const { durationTime, setdurationTime } = curDrationTime;
   const { seekValue, setSeekValue } = curSeekValue;
 
-  useEffect(() => {
-    setcurrentMusic(audioUrl);
-  }, [audioUrl]);
-
   const handlePlay = async () => {
-    if (currentMusic) {
-      audioMusic?.play();
-      setisPlay(true);
-    }
+    setisPlay(true);
   };
 
   const handlePause = () => {
-    audioMusic?.pause();
     setisPlay(false);
   };
 
+  const onScrub = (value) => {
+    audioMusic.currentTime = value;
+  };
+
+  function formatSecondsAsTime(secs) {
+    var hr = Math.floor(secs / 3600);
+    var min = Math.floor((secs - hr * 3600) / 60);
+    var sec = Math.floor(secs - hr * 3600 - min * 60);
+
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (sec < 10) {
+      sec = "0" + sec;
+    }
+
+    return min + ":" + sec;
+  }
   return (
     <>
       <div className={styles.ControlBox}>
@@ -75,13 +85,23 @@ function Control({ audioUrl }) {
           </Btn>
         </div>
         <div className={styles.ControlBoxRange}>
-          <span style={{ color: "#ffff" }}>{currentTime}</span>
-          <Range value={{ seekValue, setSeekValue }} />
-          <span style={{ color: "#ffff" }}>{currentTime}</span>
+          <span style={{ color: "#ffff" }}>
+            {formatSecondsAsTime(currentTime)}
+          </span>
+          <Range
+            onChange={onScrub}
+            max={durationTime}
+            value={currentTime}
+            rightText={formatSecondsAsTime(durationTime)}
+            leftText={formatSecondsAsTime(currentTime)}
+          />
+          <span style={{ color: "#ffff" }}>
+            {formatSecondsAsTime(durationTime)}
+          </span>
         </div>
       </div>
     </>
   );
 }
 
-export default Control;
+export default memo(Control);

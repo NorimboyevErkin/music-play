@@ -52,14 +52,14 @@ function Search() {
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
         gap: "1rem",
         padding:"2rem 1rem"
       }}
     >
-      <CategoryCard
+      {/* <CategoryCard
         imgUrl="https://fakeimg.pl/600/365314/fff?text=Cover&font=lobster"
         title="Jazz"
         bgColor="#F48444"
@@ -68,7 +68,7 @@ function Search() {
         imgUrl="https://fakeimg.pl/600/1e3a8a/fff?text=Cover&font=lobster"
         title="Student"
         bgColor="#FC71E6"
-      />
+      /> */}
 
       {category.map((item, index) => (
         <CategoryCard

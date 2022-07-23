@@ -1,5 +1,7 @@
+import Status from "../../component/status/status";
+
 function PlayList() {
-  return <h1 className="title">PlayList</h1>;
+  return <Status status="sorry"/>;
 }
 
 export default PlayList;

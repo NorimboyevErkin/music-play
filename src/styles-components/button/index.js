@@ -27,7 +27,7 @@ function typeFunc(props) {
     transition:transform 0.2s ease-in-out;
     text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
       &:hover {
-    transform:scale(1.03);
+    transform:scale(1.02);
     }
     `;
   } else if (type === "circle-primary") {
@@ -39,7 +39,7 @@ function typeFunc(props) {
     border-radius:50%;
     transition: transform 0.2s ease-in-out;
       &:hover {
-    transform:scale(1.03);
+    transform:scale(1.02);
     }
     `;
   } else if (type === "link") {
@@ -75,7 +75,7 @@ const Btn = memo(styled.button`
   all: unset;
   ${(props) => typeFunc(props)};
   position: relative;
-  display:inline-flex;
+  display:flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;

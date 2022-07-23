@@ -1,5 +1,9 @@
+import Status from "../../component/status/status";
+
 function LikedSongs() {
-  return <h1 className="title">LikedSongs</h1>;
+  return (
+   <Status status="creating"/>
+  );
 }
 
 export default LikedSongs;

@@ -1,0 +1,20 @@
+.ShowCaseBox {
+  margin: 1rem;
+  display:inline-flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  .ShowCaseBoxImg {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    box-shadow: var(--img-shadow);
+  }
+  .ShowCaseBoxInfo {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,5 +1,5 @@
 .SideMenuBox {
-  z-index: 99;
+  z-index: 19;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -13,7 +13,6 @@
   overflow-y: auto;
   transition: left 0.5s ease-in-out;
   @media (max-width: 900px) {
-    // display: none;
     position: fixed !important;
     top: 0;
     left: -100%;
