@@ -1,4 +1,5 @@
-@mixin categoryCard {
+.CategoryCardBox {
+  min-height: 200px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -12,49 +13,20 @@
     opacity: 0.9;
     transform: translateY(-3px);
   }
-}
-@mixin title {
-  display: inline-block;
-  font-weight: 700;
-  color: var(--white);
-}
-@mixin img {
-  position: absolute;
-  border-radius: 6px;
-  object-fit: contain;
-  box-shadow: -2px, 2px, 6px rgba(0, 0, 0, 0.15);
-  transform: rotate(25deg);
-}
-.CategoryCardBox {
-  @include categoryCard();
-  min-width: 514px;
-  height: 254px;
-
   .CategoryCardTitle {
-    @include title();
-    font-size: 2rem;
-  }
-
-  .CategoryCardImg {
-    @include img();
-    width: 164px;
-    height: 164px;
-    right: -30px;
-    bottom: -5%;
-    box-shadow: var(--img-shadow);
-  }
-}
-.CategoryCardSquareBox {
-  @include categoryCard();
-  width: 200px;
-  height: 200px;
-
-  .CategoryCardTitle {
-    @include title();
-    font-size: 1.7rem;
+    display: inline-block;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1.5rem;
+    width: 180px;
+    text-overflow: ellipsis;
   }
   .CategoryCardImg {
-    @include img();
+    position: absolute;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: -2px, 2px, 6px rgba(0, 0, 0, 0.15);
+    transform: rotate(25deg);
     width: 128px;
     height: 128px;
     right: -30px;

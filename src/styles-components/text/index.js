@@ -3,21 +3,26 @@ import styled from "styled-components";
 
 const Title = memo(styled.h2`
   font-size: ${({ size }) =>
-    size && size === "large"
-      ? "4rem"
-      : size === "medium"
-      ? "1.3rem"
-      : "1rem"};
+    size && size === "large" ? "4rem" : size === "medium" ? "1.3rem" : "1rem"};
   font-weight: ${({ weight }) =>
     weight && weight === "bold" ? "900" : weight === "bolder" ? "600" : "400"};
   text-align: ${({ align }) =>
     align && align === "center" ? "center" : align === "end" ? "end" : "start"};
-  color: ${({color})=> color ? color : "var(--white-text)"};
+  color: ${({ color }) => (color ? color : "var(--white-text)")};
   display: -webkit-inline-box;
   -webkit-line-clamp: ${({ line }) => line || 2};
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin: 0 0 5px 0;
+
+  @media (max-width: 600px) {
+    font-size: ${({ size }) =>
+      size && size === "large"
+        ? "2.5rem"
+        : size === "medium"
+        ? "1.3rem"
+        : "1rem"};
+  }
 `);
 
 const Description = memo(styled.p`

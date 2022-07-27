@@ -1,4 +1,4 @@
-import { useContext, memo} from "react";
+import { useContext, memo } from "react";
 import {
   Next,
   PauseFill,
@@ -10,14 +10,27 @@ import {
 import { Btn } from "../../styles-components/button";
 import Range from "../range/range";
 import styles from "./control.styles.module.scss";
-import { AudioMusic, CurrentMusic } from "../../utils/context";
+import {
+  AudioMusic,
+  CurrentMusic,
+  MusicOptions,
+  CurrentAlbum,
+} from "../../utils/context";
 
 function Control() {
   const { curMusic, curPlay, curSeekValue, curTime, curDrationTime } =
     useContext(CurrentMusic);
-  const  audioMusic = useContext(AudioMusic);
+  const audioMusic = useContext(AudioMusic);
+  const { shuffle, repeat } = useContext(MusicOptions);
+
+  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
+  const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
+    curAlbumSongIndex;
+
+  const { isShuffle, setisShuffle } = shuffle;
+  const { isRepeat, setisRepeat } = repeat;
   const { isPlay, setisPlay } = curPlay;
-  const { currentMusic, setcurrentMusic } = curMusic;
   const { currentTime, setCurrentTime } = curTime;
   const { durationTime, setdurationTime } = curDrationTime;
   const { seekValue, setSeekValue } = curSeekValue;
@@ -48,14 +61,46 @@ function Control() {
 
     return min + ":" + sec;
   }
+
+  // prev
+  const handlePrev = async () => {
+    await setisPlay(false);
+    if (currentAlbum.songs[currentAlbumSongsIndex - 1]) {
+      await setcurrentAlbumSongsIndex(currentAlbumSongsIndex - 1);
+    } else {
+      await setcurrentAlbumSongsIndex(currentAlbum.songs.length - 1);
+    }
+    setisPlay(true);
+  };
+  // next
+  const handleNext = async () => {
+    await setisPlay(false);
+    if (currentAlbum?.songs[currentAlbumSongsIndex + 1]) {
+      await setcurrentAlbumSongsIndex(currentAlbumSongsIndex + 1);
+    } else {
+      await setcurrentAlbumSongsIndex(0);
+    }
+    setisPlay(true);
+  };
   return (
     <>
       <div className={styles.ControlBox}>
         <div className={styles.ControlBoxActions}>
-          <Btn type="link">
-            <Shuffle width={25} height={25} />
+          <Btn
+            type="link"
+            onClick={() => {
+              if (!isRepeat) {
+                setisShuffle(!isShuffle);
+              }
+            }}
+          >
+            <Shuffle
+              width={25}
+              height={25}
+              color={isShuffle ? "var(--green)" : "#BABABA"}
+            />
           </Btn>
-          <Btn type="link">
+          <Btn type="link" onClick={() => handlePrev()}>
             <Prev width={25} height={25} />
           </Btn>
           {isPlay ? (
@@ -77,15 +122,26 @@ function Control() {
               <PlayFill />
             </Btn>
           )}
-          <Btn type="link">
+          <Btn type="link" onClick={() => handleNext()}>
             <Next width={25} height={25} />
           </Btn>
-          <Btn type="link">
-            <Repeat width={25} height={25} />
+          <Btn
+            type="link"
+            onClick={() => {
+              if (!isShuffle) {
+                setisRepeat(!isRepeat);
+              }
+            }}
+          >
+            <Repeat
+              width={25}
+              height={25}
+              color={isRepeat ? "var(--green)" : "#BABABA"}
+            />
           </Btn>
         </div>
         <div className={styles.ControlBoxRange}>
-          <span style={{ color: "#ffff" }}>
+          <span style={{ color: "#ffff", zIndex: 2 }}>
             {formatSecondsAsTime(currentTime)}
           </span>
           <Range
@@ -95,7 +151,7 @@ function Control() {
             rightText={formatSecondsAsTime(durationTime)}
             leftText={formatSecondsAsTime(currentTime)}
           />
-          <span style={{ color: "#ffff" }}>
+          <span style={{ color: "#ffff", zIndex: 2 }}>
             {formatSecondsAsTime(durationTime)}
           </span>
         </div>

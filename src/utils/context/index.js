@@ -1,12 +1,19 @@
 import {createContext } from "react";
 
-const MyContext = createContext();
-
 const DropMenu = createContext({}); // left navbar menu
 const CurrentMusic = createContext(null); // current music info
 const AudioMusic = createContext(null); // audio ref
+const CurrentAlbum = createContext(null); 
+const MusicOptions = createContext(null); 
+const LikedSongsList = createContext(null); 
+const SearchValue = createContext(""); 
 
-
-
-
-export { MyContext, DropMenu, CurrentMusic, AudioMusic };
+export {
+  DropMenu,
+  CurrentMusic,
+  AudioMusic,
+  CurrentAlbum,
+  MusicOptions,
+  LikedSongsList,
+  SearchValue,
+};

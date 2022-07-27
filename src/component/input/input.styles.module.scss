@@ -1,4 +1,8 @@
 .MyInput {
+  max-width: 400px;
+  @media (max-width: 600px) {
+    min-width: 100% !important;
+  }
   background: var(--white);
   border: 1px solid var(--main-border);
   padding: 0.3rem 1rem;
@@ -11,7 +15,6 @@
   input {
     all: unset;
     width: 100%;
-    min-width: 300px;
     font-size: 1.2rem;
     display: inline-block;
     margin-left: 0.7rem;

@@ -4,7 +4,12 @@ import SongCardInfo from "../song-card-info/songCardInfo";
 import Control from "../control/control";
 import Options from "../options/options";
 import Like from "../like/like";
-import { AudioMusic, CurrentMusic } from "../../utils/context";
+import {
+  AudioMusic,
+  CurrentMusic,
+  CurrentAlbum,
+  MusicOptions,
+} from "../../utils/context";
 import { Title } from "../../styles-components/text";
 import { useTranslation } from "react-i18next";
 
@@ -21,6 +26,15 @@ function SongCardPlayer() {
     curDrationTime,
     curVolume,
   } = useContext(CurrentMusic);
+  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
+  const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
+    curAlbumSongIndex;
+
+  const { shuffle, repeat } = useContext(MusicOptions);
+  const { isShuffle, setisShuffle } = shuffle;
+  const { isRepeat, setisRepeat } = repeat;
+
   const { currentMusic, setcurrentMusic } = curMusic;
   const { currentTime, setCurrentTime } = curTime;
   const { durationTime, setdurationTime } = curDrationTime;
@@ -28,13 +42,19 @@ function SongCardPlayer() {
   const { isPlay, setisPlay } = curPlay;
   const { volume, setvolume } = curVolume;
   const { speed, setspeed } = curSpeed;
-  const { imgUrl, title, description, audioUrl } = currentMusic;
+  const { imgUrl, title, artist, audioUrl } = currentMusic;
 
   // put music src
   useEffect(() => {
     audioMusic.src = audioUrl;
   }, [currentMusic]);
 
+  // next ,prev
+  useEffect(() => {
+    if (currentAlbum) {
+      setcurrentMusic(currentAlbum.songs[currentAlbumSongsIndex]);
+    }
+  }, [currentAlbumSongsIndex]);
   // set volume
   useEffect(() => {
     audioMusic.volume = volume;
@@ -44,13 +64,6 @@ function SongCardPlayer() {
   useEffect(() => {
     audioMusic.playbackRate = speed;
   }, [speed]);
-
-  // put func
-  useEffect(() => {
-    audioMusic.onloadedmetadata = onLoading;
-    audioMusic.ontimeupdate = onPlaying;
-    audioMusic.onended = handleEnded;
-  }, []);
 
   // play music controll
   useEffect(() => {
@@ -71,11 +84,40 @@ function SongCardPlayer() {
     }
   }, [isPlay]);
 
-  const handleEnded = () => {
-    setisPlay(false);
+  // next
+  const next = async () => {
+    await setisPlay(false);
+    if (currentAlbum?.songs[currentAlbumSongsIndex + 1]) {
+      await setcurrentAlbumSongsIndex(currentAlbumSongsIndex + 1);
+    } else {
+      await setcurrentAlbumSongsIndex(0);
+    }
+    setisPlay(true);
+  };
+  
+  const onShuffle = async () => {
+    await setisPlay(false);
+    await setcurrentAlbumSongsIndex(
+      Math.ceil(Math.random() * currentAlbum.songs.length - 1)
+    );
+    setisPlay(true);
+  };
+  const onRepeat = async () => {
+    await setisPlay(false);
+    setisPlay(true);
+  };
+  const handleEnded = async () => {
     setSeekValue(0);
     setCurrentTime(0);
+    if (isShuffle) {
+      onShuffle();
+    } else if (isRepeat) {
+      onRepeat();
+    } else {
+      next();
+    }
   };
+
   const onPlaying = () => {
     setCurrentTime(audioMusic.currentTime);
     setSeekValue((audioMusic.currentTime / audioMusic?.duration) * 100);
@@ -84,6 +126,11 @@ function SongCardPlayer() {
     setdurationTime(audioMusic?.duration);
   };
 
+  // put func
+  audioMusic.onloadedmetadata = onLoading;
+  audioMusic.ontimeupdate = onPlaying;
+  audioMusic.onended = handleEnded;
+
   return (
     <>
       {currentMusic.audioUrl ? (
@@ -91,18 +138,16 @@ function SongCardPlayer() {
           <div className={styles.SongCardPlayerBox}>
             <div className={styles.SongCardPlayerGrid}>
               <div className={styles.SongCardPlayerInfo}>
-                <SongCardInfo
-                  imgUrl={imgUrl}
-                  description={description}
-                  title={title}
-                />
-                <Like islike={true} />
+                <SongCardInfo imgUrl={imgUrl} artist={artist} title={title} />
+                <div className={styles.SongCardPlayerLike}>
+                  <Like islike={true} />
+                </div>
               </div>
               <div className={styles.SongCardPlayerAction}>
-                <Control />
+                <Control/>
               </div>
               <div className={styles.SongCardPlayerOptions}>
-                <Options isLike={false} />
+                <Options />
               </div>
             </div>
           </div>

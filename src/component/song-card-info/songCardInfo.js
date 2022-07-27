@@ -2,7 +2,7 @@ import { memo } from "react";
 import { ImgCard } from "../../styles-components/img-card";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songCardInfo.styles.module.scss";
-function SongCardInfo({ imgUrl, title, description }) {
+function SongCardInfo({ imgUrl, title, artist }) {
   return (
     <div className={styles.SongCardInfoBox}>
       <div className={styles.SongCardInfoImg}>
@@ -13,7 +13,7 @@ function SongCardInfo({ imgUrl, title, description }) {
           {title}
         </Title>
         <Description line={1} weight="bolder">
-          {description}
+          {artist}
         </Description>
       </div>
     </div>

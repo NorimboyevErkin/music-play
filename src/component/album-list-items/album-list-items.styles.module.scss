@@ -1,28 +1,33 @@
 .SongListItemBox {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  @media (max-width: 650px) {
+    grid-template-columns: 4fr 3fr;
+  }
   padding: 0.4rem 1rem;
+  @media (max-width: 500px) {
+    padding: 0.4rem;
+  }
   background: transparent;
   transition: background 0.2s ease-in-out;
   .SongListItemBoxLeft {
-    flex: 0.4;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   .SongListItemBoxRight {
-    padding-right: 1rem;
-    flex: 0.3;
+    // padding-right: 1rem;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
   .SongListItemBoxCenter {
-    flex: 0.3;
+    @media (max-width: 650px) {
+      display: none;
+    }
     width: 100%;
     display: flex;
     justify-content: center;

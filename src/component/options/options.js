@@ -5,12 +5,10 @@ import Range from "../range/range";
 import styles from "./options.styles.module.scss";
 import { CurrentMusic, DropMenu } from "../../utils/context";
 import Dropdown from "../dropdown/dropdown";
-import Like from "../like/like";
 function Options({
   isFullScreen = true,
   isVolume = true,
   isDropdown = true,
-  isLike = true,
 }) {
   const { fullPlayer } = useContext(DropMenu);
   const { OpenFullPlayer, setOpenFullPlayer } = fullPlayer;
@@ -44,17 +42,19 @@ function Options({
       ) : null}
       <div className={styles.OptionsBoxVolume}>
         {isVolume ? (
-          <Btn type="link">
-            <Volume width={25} height={25} />
-          </Btn>
+          <>
+            <Btn type="link">
+              <Volume width={25} height={25} />
+            </Btn>
+            <Range
+              onChange={changeVolume}
+              min={0}
+              max={1}
+              step={0.01}
+              defaultValue={volume}
+            />
+          </>
         ) : null}
-        <Range
-          onChange={changeVolume}
-          min={0}
-          max={1}
-          step={0.01}
-          defaultValue={volume}
-        />
       </div>
       {isFullScreen ? (
         <Btn
@@ -66,7 +66,6 @@ function Options({
           <FullScreen width={25} height={25} />
         </Btn>
       ) : null}
-      {isLike ? <Like /> : null}
     </div>
   );
 }

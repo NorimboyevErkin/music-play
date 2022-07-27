@@ -19,9 +19,13 @@
   flex-wrap: wrap;
 }
 .FooterBox {
+  border-top: 1px solid var(--box-hover-color);
   background: var(--layout-color);
   .FooterBoxGrid {
     padding: 1rem 2rem;
+    @media (max-width: 500px) {
+      padding: 1rem;
+    }
     .FooterBoxNavbar {
       @include flex-wrap();
       .FooterBoxNav {

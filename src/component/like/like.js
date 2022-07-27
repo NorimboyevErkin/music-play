@@ -1,14 +1,48 @@
-import React, { useState ,memo} from "react";
+import React, { useState, memo, useContext } from "react";
 import { Heart, HeartFill } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
+import { LikedSongsList } from "../../utils/context";
 
-function Like({ islike }) {
-  const [like, setlike] = useState(islike || false);
+function Like({ data }) {
+  const { likedMusic, likedMusicId } = useContext(LikedSongsList);
+  const { likedSongs, setlikedSongs } = likedMusic;
+  const { likedSongsId, setlikedSongsId } = likedMusicId;
+
+  const [like, setlike] = useState(likedSongsId.includes(data?.id));
+
+  const likeChange = async () => {
+    if (like) {
+      await setlikedSongsId((old) => {
+        const newlikedsid = old.filter((item) => {
+          return item !== data.id;
+        });
+        return newlikedsid;
+      });
+      await setlikedSongs((old) => {
+        const newlikeds = old.filter((item) => {
+          return item.id !== data.id;
+        });
+        return newlikeds;
+      });
+    } else {
+      await setlikedSongsId((old) => {
+        const newlikedsid = [...old, data.id];
+        return newlikedsid.reverse();
+      });
+
+      await setlikedSongs((old) => {
+        const newlikeds = [...old, data];
+        return newlikeds.reverse();
+      });
+    }
+    setlike(!like);
+  };
+
   return (
     <Btn
       type="link"
       onClick={() => {
-        setlike(!like);
+        likeChange();
       }}
     >
       {like ? <HeartFill color="var(--green)" /> : <Heart />}

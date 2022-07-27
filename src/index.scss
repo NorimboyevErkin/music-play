@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 :root {
   --green: #1cb955;
-  --main-section-color: linear-gradient(#1f1f1f, #121212);
+  --main-section-color: linear-gradient( #161616 , #121212 );
+  // --main-section-color:  #121212;
+
   --empty-music-player-color: linear-gradient(to right, #af2896, #509bf5);
 
   --muted-text: #b3b3b3;
@@ -39,11 +41,10 @@ ul {
   }
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  display: none;
 }
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: #535353 !important;
+.slick-arrow{
+display: none !important;
 }
 .title {
   background: linear-gradient(286.17deg, #9610ff 0%, #af48ff 100%);

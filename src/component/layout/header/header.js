@@ -10,12 +10,16 @@ import Dropdown from "../../dropdown/dropdown";
 import { language } from "../../../utils/data/language";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import { DropMenu } from "../../../utils/context";
+import { DropMenu, CurrentMusic, SearchValue } from "../../../utils/context";
+import Options from "../../options/options";
 
 function Header({ changeBg }) {
   const { t, i18n } = useTranslation();
-
+  
   const { dropSide } = useContext(DropMenu);
+  const { curMusic } = useContext(CurrentMusic);
+  const { search, setsearch } = useContext(SearchValue);
+  const { currentMusic, setcurrentMusic } = curMusic;
   const { OpenDropMenu } = dropSide;
   const { openFunc } = OpenDropMenu;
   const navigate = useNavigate();
@@ -66,15 +70,23 @@ function Header({ changeBg }) {
           >
             <Forward width="32" height="32" />
           </Btn>
-
-          {pathname.startsWith("/search") ? (
-            <div className={styles.HeaderChild}>
-              <Input color="var(--dark-text)" />
-            </div>
-          ) : null}
         </div>
+        {pathname.startsWith("/search") ? (
+          <div className={styles.HeaderInput}>
+            <Input onChange={setsearch} value={search} />
+          </div>
+        ) : null}
 
         <div className={styles.HeaderAccountInfo}>
+          <div className={styles.HeaderAccountFullPlayer}>
+            {currentMusic.audioUrl ? (
+              <Options
+                isFullScreen={true}
+                isVolume={false}
+                isDropdown={false}
+              />
+            ) : null}
+          </div>
           <Dropdown menu={menu} placement="bottomRight">
             <Btn
               type="link"

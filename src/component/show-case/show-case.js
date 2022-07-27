@@ -1,15 +1,14 @@
 import { memo } from "react";
-import { Description, Title } from "../../styles-components/text";
 import styles from "./show-case.styles.module.scss";
 function ShowCase({ description, title, imgUrl }) {
   return (
     <div className={styles.ShowCaseBox}>
-      <img src={imgUrl} alt={title} className={styles.ShowCaseBoxImg} />
+      {imgUrl ? (
+        <img src={imgUrl} alt={title} className={styles.ShowCaseBoxImg} />
+      ) : null}
       <div className={styles.ShowCaseBoxInfo}>
-        <Title size="large" weight="bold">
-          {title}
-        </Title>
-        <Description size="medium">{description}</Description>
+        {title ? <h2>{title}</h2> : null}
+        {description ? <p>{description}</p> : null}
       </div>
     </div>
   );

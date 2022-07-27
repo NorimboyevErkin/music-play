@@ -2,7 +2,7 @@ import { memo } from "react";
 import styled from "styled-components";
 
 const ImgCard = memo(styled.div`
-  width: ${({ width }) =>
+  min-width: ${({ width }) =>
     width && width === "large"
       ? "400px"
       : width === "medium"
@@ -10,7 +10,7 @@ const ImgCard = memo(styled.div`
       : width === "small"
       ? "60px"
       : width};
-  height: ${({ height }) =>
+  min-height: ${({ height }) =>
     height && height === "large"
       ? "400px"
       : height === "medium"
@@ -24,7 +24,7 @@ const ImgCard = memo(styled.div`
   background-position: center top;
   box-shadow: var(--box-shadow);
   cursor: pointer;
-  @media (max-width: 450px) {
+  /* @media (max-width: 450px) {
     width: ${({ width }) =>
       width && width === "large"
         ? "220px"
@@ -42,7 +42,7 @@ const ImgCard = memo(styled.div`
         : height === "small"
         ? "60px"
         : height};
-  }
+  } */
 `);
 
 export { ImgCard };

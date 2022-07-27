@@ -1,9 +1,15 @@
 .ShowCaseBox {
+  // width: 100%;
   margin: 1rem;
-  display:inline-flex;
-  justify-content:flex-start;
+  display: inline-flex;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  @media (max-width: 850px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
   column-gap: 2rem;
   .ShowCaseBoxImg {
     max-width: 250px;
@@ -12,9 +18,28 @@
     box-shadow: var(--img-shadow);
   }
   .ShowCaseBoxInfo {
-    display: flex;
-    justify-content:center;
+    // width: 100%;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+
+    @media (max-width: 850px) {
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+    h2 {
+      text-overflow: ellipsis;
+      color: var(--white-text);
+      font-size: 3.5rem;
+      @media (max-width: 500px) {
+        font-size: 2.5rem;
+      }
+    }
+    p {
+      text-overflow: ellipsis;
+      color: var(--muted-text);
+      font-size: 1.2rem;
+    }
   }
 }

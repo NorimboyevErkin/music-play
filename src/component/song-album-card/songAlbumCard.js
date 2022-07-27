@@ -3,38 +3,55 @@ import { Pause, Play } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songAlbumCard.styles.module.scss";
-import { CurrentMusic } from "../../utils/context";
-import { ImgCard } from "../../styles-components/img-card";
-
-function SongAlbumCard(data) {
-  const { id, title, description, imgUrl, audioUrl } = data;
+import { CurrentMusic, CurrentAlbum } from "../../utils/context";
+// import { ImgCard } from "../../styles-components/img-card";
+import { useNavigate } from "react-router-dom";
+function SongAlbumCard({ data }) {
+  const { id, title, description, img, songs } = data;
   const { curMusic, curPlay } = useContext(CurrentMusic);
+  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
+  const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
+    curAlbumSongIndex;
+
   const { currentMusic, setcurrentMusic } = curMusic;
   const { isPlay, setisPlay } = curPlay;
   const [play, setplay] = useState(false);
+  const navigate = useNavigate();
 
-  const controll = async (status) => {
-    if (status === "pause") {
-      await setisPlay(false);
-      setplay(false);
-    } else {
-      await setisPlay(false);
-      await setcurrentMusic(data);
-      await setisPlay(true);
-      setplay(true);
+  const controll =  (status) => {
+     setcurrentAlbumSongsIndex(0);
+     setisPlay(false);
+    if (status === "play") {
+       setcurrentAlbum(data);
+       setcurrentMusic(songs[currentAlbumSongsIndex]);
+       setisPlay(true);
     }
   };
 
+  const goToLibrary = async () => {
+    await setcurrentAlbum(data);
+    navigate("/library");
+  };
+
   useEffect(() => {
-    setplay(currentMusic.audioUrl === audioUrl);
-    // return () => {
-    //   setplay(false);
-    // };
+    if (isPlay && currentAlbum) {
+      setplay(currentAlbum.id === id);
+    } else {
+      setplay(false);
+    }
   }, [isPlay]);
+
   return (
-    <div className={styles.songCardBox}>
+    <div
+      className={styles.songCardBox}
+      onClick={() => {
+        goToLibrary();
+      }}
+    >
       <div className={styles.songCardBoxHeader}>
-        <ImgCard imgUrl={imgUrl} height="medium" width="medium" border="4px" />
+        {/* <ImgCard imgUrl={imgUrl} height="medium" width="medium" border="4px" /> */}
+        <img src={img} alt="img" />
         {play ? (
           <Btn
             type="circle-primary"
@@ -42,7 +59,8 @@ function SongAlbumCard(data) {
             width="45px"
             height="45px"
             bgColor="var(--green)"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               controll("pause");
             }}
           >
@@ -55,7 +73,8 @@ function SongAlbumCard(data) {
             width="45px"
             height="45px"
             bgColor="var(--green)"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               controll("play");
             }}
           >

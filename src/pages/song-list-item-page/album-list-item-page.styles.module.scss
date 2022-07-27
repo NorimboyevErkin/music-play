@@ -6,7 +6,7 @@
   flex-direction: column;
   .AlbumListItemPageBoxShowCase {
     width: 100%;
-    padding:1rem 2rem;
+    padding: 1rem 2rem;
   }
   .AlbumListItemPageSongs {
     width: 100%;
@@ -20,15 +20,20 @@
     .AlbumListItemPageSongsAction {
       width: 100%;
       display: flex;
-      padding:0 1rem 1rem 1rem;
+      margin-bottom: 1rem;
       justify-content: space-between;
       align-items: center;
-
-      .AlbumListItemPageSongsControll{
+      @media (max-width:600px) {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+      .AlbumListItemPageSongsControll {
         display: flex;
         justify-content: center;
         align-items: center;
-        column-gap: .5rem;
+        column-gap: 0.5rem;
       }
     }
   }

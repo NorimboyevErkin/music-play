@@ -1,4 +1,4 @@
-import React, { memo, useState, useRef } from "react";
+import React, { memo, useState, useRef, useEffect } from "react";
 import Header from "./header/header";
 import styles from "./layout.styles.module.scss";
 import SideMenu from "./side-menu/side-menu";
@@ -18,7 +18,9 @@ function Layout({ children }) {
 
   return (
     <>
-      <main className={styles.Layout}>
+      <main className={styles.Layout} 
+      // style={{ height: `${window.innerHeight}px` }}
+      >
         <div className={styles.LayoutSection}>
           <SideMenu />
           <div className={styles.LayoutMainWrapper} ref={mainWrapper}>

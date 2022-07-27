@@ -1,6 +1,6 @@
 .StatusBox {
-  padding:2rem 1rem;
-  height: calc(100vh - 145px);
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 145px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -9,5 +9,8 @@
   img {
     width: 300px;
     object-fit: contain;
+    @media (max-width: 500px) {
+      width: 70%;
+    }
   }
 }

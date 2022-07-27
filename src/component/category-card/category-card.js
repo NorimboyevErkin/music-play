@@ -1,17 +1,28 @@
-import React, { memo } from "react";
+import React, { memo ,useContext} from "react";
+import { useNavigate } from "react-router-dom";
+import { CurrentAlbum } from "../../utils/context";
 import styles from "./category-card.styles.module.scss";
-function CategoryCard({ type, bgColor, title, imgUrl }) {
+function CategoryCard({ data }) {
+  const { color, title, img } = data;
+  const navigate = useNavigate();
+  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
+
+  const goToLibrary = async () => {
+    await setcurrentAlbum(data);
+    navigate("/library");
+  };
+
   return (
     <div
-      className={
-        type === "square"
-          ? styles.CategoryCardSquareBox
-          : styles.CategoryCardBox
-      }
-      style={{ background: `${bgColor}` }}
+      className={styles.CategoryCardBox}
+      style={{ background: `${color}` }}
+      onClick={() => {
+        goToLibrary();
+      }}
     >
       <h2 className={styles.CategoryCardTitle}>{title}</h2>
-      <img src={imgUrl} alt={title} className={styles.CategoryCardImg} />
+      <img src={img} alt={title} className={styles.CategoryCardImg} />
     </div>
   );
 }
