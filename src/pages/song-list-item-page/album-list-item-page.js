@@ -96,7 +96,7 @@ function AlbumListItemPage({ album }) {
         </div>
         <SongListItemTitle />
         {filterSongs?.map((item, index) => (
-          <SongListItem key={index} index={index} album={title} data={item} />
+          <SongListItem key={index} index={index} data={item} />
         ))}
       </div>
     </div>

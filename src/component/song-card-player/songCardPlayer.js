@@ -94,7 +94,7 @@ function SongCardPlayer() {
     }
     setisPlay(true);
   };
-  
+
   const onShuffle = async () => {
     await setisPlay(false);
     await setcurrentAlbumSongsIndex(
@@ -140,11 +140,11 @@ function SongCardPlayer() {
               <div className={styles.SongCardPlayerInfo}>
                 <SongCardInfo imgUrl={imgUrl} artist={artist} title={title} />
                 <div className={styles.SongCardPlayerLike}>
-                  <Like islike={true} />
+                  <Like data={currentMusic} />
                 </div>
               </div>
               <div className={styles.SongCardPlayerAction}>
-                <Control/>
+                <Control />
               </div>
               <div className={styles.SongCardPlayerOptions}>
                 <Options />

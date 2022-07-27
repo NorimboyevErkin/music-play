@@ -8,7 +8,7 @@ function Home() {
   return (
     <div
       style={{
-        padding: "2rem 1rem",
+        padding: "2rem",
       }}
     >
       <Title size="medium">Top music</Title>

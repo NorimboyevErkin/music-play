@@ -45,9 +45,9 @@ function FullPlayer() {
         </Btn>
       </div>
       <div className={styles.FullPlayerBoxTopLike}>
-        <Like />
+        <Like data={currentMusic} />
       </div>
-        <div className={styles.FullPlayerBoxGridShadow}></div>
+      <div className={styles.FullPlayerBoxGridShadow}></div>
       <div className={styles.FullPlayerBoxGrid}>
         <div className={styles.FullPlayerBoxTitle}>
           <Title size="medium" line={1}>

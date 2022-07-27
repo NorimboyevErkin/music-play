@@ -7,8 +7,8 @@ import Loading from "../loading/loading";
 import SongCardInfo from "../song-card-info/songCardInfo";
 import styles from "./album-list-items.styles.module.scss";
 import { CurrentMusic, CurrentAlbum } from "../../utils/context";
-function SongListItem({ data, album, index }) {
-  const { imgUrl, audioUrl, title, artist } = data;
+function SongListItem({ data, index }) {
+  const {id, imgUrl, audioUrl, title, artist ,albumName} = data;
   const { curMusic, curPlay } = useContext(CurrentMusic);
   const { curAlbumSongIndex } = useContext(CurrentAlbum);
   const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
@@ -29,7 +29,7 @@ function SongListItem({ data, album, index }) {
 
   useEffect(() => {
     if (isPlay) {
-      setplay(currentMusic.audioUrl === audioUrl);
+      setplay(currentMusic.id === id);
     } else {
       setplay(false);
     }
@@ -40,7 +40,7 @@ function SongListItem({ data, album, index }) {
         <SongCardInfo imgUrl={imgUrl} title={title} artist={artist} />
       </div>
       <div className={styles.SongListItemBoxCenter}>
-        <Description align="center">{album}</Description>
+        <Description align="center">{albumName}</Description>
       </div>
       <div className={styles.SongListItemBoxRight}>
         {play ? (

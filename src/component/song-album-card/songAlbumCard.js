@@ -19,13 +19,13 @@ function SongAlbumCard({ data }) {
   const [play, setplay] = useState(false);
   const navigate = useNavigate();
 
-  const controll =  (status) => {
-     setcurrentAlbumSongsIndex(0);
-     setisPlay(false);
+  const controll = async (status) => {
+    await setisPlay(false);
+    await setcurrentAlbumSongsIndex(0);
     if (status === "play") {
-       setcurrentAlbum(data);
-       setcurrentMusic(songs[currentAlbumSongsIndex]);
-       setisPlay(true);
+     await setcurrentAlbum(data);
+     await setcurrentMusic(songs[0]);
+      setisPlay(true);
     }
   };
 

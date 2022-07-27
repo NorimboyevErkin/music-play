@@ -9,7 +9,7 @@ function LikedSongs() {
   const { likedSongs, setlikedSongs } = likedMusic;
   // const songsArr = ;
   const myAlbum = {
-    title: "Likeds songs",
+    title: "Liked Songs",
     description: "My Likeds songs !",
     img: "https://misc.scdn.co/liked-songs/liked-songs-300.png",
     songs: likedSongs,

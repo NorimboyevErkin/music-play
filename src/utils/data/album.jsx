@@ -14,7 +14,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a2",
@@ -24,7 +24,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a3",
@@ -34,7 +34,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a4",
@@ -44,7 +44,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a5",
@@ -54,7 +54,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a6",
@@ -64,7 +64,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a7",
@@ -74,7 +74,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a8",
@@ -84,7 +84,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a9",
@@ -94,7 +94,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a10",
@@ -104,7 +104,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a11",
@@ -114,7 +114,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a12",
@@ -124,7 +124,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a13",
@@ -134,7 +134,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
       {
         id: "1a14",
@@ -144,7 +144,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-        isLike: false,
+        albumName: "Sad Songs",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a2",
@@ -173,7 +173,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a3",
@@ -183,7 +183,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a4",
@@ -193,7 +193,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a5",
@@ -203,7 +203,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a6",
@@ -213,7 +213,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a7",
@@ -223,7 +223,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a8",
@@ -233,7 +233,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a9",
@@ -243,7 +243,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a10",
@@ -253,7 +253,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a11",
@@ -263,7 +263,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a12",
@@ -273,7 +273,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a13",
@@ -283,7 +283,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
       {
         id: "2a14",
@@ -293,7 +293,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-        isLike: false,
+        albumName: "Rap",
       },
     ],
   },
@@ -312,7 +312,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a2",
@@ -322,7 +322,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a3",
@@ -332,7 +332,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a4",
@@ -342,7 +342,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a5",
@@ -352,7 +352,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a6",
@@ -362,7 +362,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a7",
@@ -372,7 +372,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a8",
@@ -382,7 +382,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a9",
@@ -392,7 +392,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a10",
@@ -402,7 +402,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a11",
@@ -412,7 +412,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a12",
@@ -422,7 +422,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a13",
@@ -432,7 +432,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
       {
         id: "3a14",
@@ -442,7 +442,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Snoop Dogg",
       },
     ],
   },
@@ -461,7 +461,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a2",
@@ -471,7 +471,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a3",
@@ -481,7 +481,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a4",
@@ -491,7 +491,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a5",
@@ -501,7 +501,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a6",
@@ -511,7 +511,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a7",
@@ -521,7 +521,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a8",
@@ -531,7 +531,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a9",
@@ -541,7 +541,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a10",
@@ -551,7 +551,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a11",
@@ -561,7 +561,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a12",
@@ -571,7 +571,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a13",
@@ -581,7 +581,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
       {
         id: "4a14",
@@ -591,13 +591,13 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Timati",
       },
     ],
   },
   {
     id: 5,
-    title: "Rap",
+    title: "Classic",
     description: "Rap songs",
     img: "https://i.scdn.co/image/ab6761610000e5eb8d5a3c1484efc04752acabf8",
     color: "#876AA7",
@@ -610,7 +610,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a2",
@@ -620,7 +620,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a3",
@@ -630,7 +630,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a4",
@@ -640,7 +640,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a5",
@@ -650,7 +650,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a6",
@@ -660,7 +660,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a7",
@@ -670,7 +670,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a8",
@@ -680,7 +680,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a9",
@@ -690,7 +690,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a10",
@@ -700,7 +700,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a11",
@@ -710,7 +710,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a12",
@@ -720,7 +720,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a13",
@@ -730,7 +730,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
       {
         id: "5a14",
@@ -740,7 +740,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Classic",
       },
     ],
   },
@@ -759,7 +759,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a2",
@@ -769,7 +769,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a3",
@@ -779,7 +779,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a4",
@@ -789,7 +789,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a5",
@@ -799,7 +799,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a6",
@@ -809,7 +809,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a7",
@@ -819,7 +819,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a8",
@@ -829,7 +829,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a9",
@@ -839,7 +839,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a10",
@@ -849,7 +849,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a11",
@@ -859,7 +859,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a12",
@@ -869,7 +869,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a13",
@@ -879,7 +879,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
       {
         id: "6a14",
@@ -889,13 +889,13 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "XXXTentacion",
       },
     ],
   },
   {
     id: 7,
-    title: "Timati",
+    title: "Jony",
     description: "Timati songs",
     img: "https://is5-ssl.mzstatic.com/image/thumb/Music115/v4/0e/9e/48/0e9e48c2-839c-f7f5-cd2e-9ef7644f2be1/195497569052.jpg/486x486bb.png",
     color: "#FC71E6",
@@ -908,7 +908,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a2",
@@ -918,7 +918,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a3",
@@ -928,7 +928,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a4",
@@ -938,7 +938,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a5",
@@ -948,7 +948,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a6",
@@ -958,7 +958,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a7",
@@ -968,7 +968,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a8",
@@ -978,7 +978,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a9",
@@ -988,7 +988,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a10",
@@ -998,7 +998,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a11",
@@ -1008,7 +1008,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a12",
@@ -1018,7 +1018,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a13",
@@ -1028,7 +1028,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
       {
         id: "7a14",
@@ -1038,13 +1038,13 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Jony",
       },
     ],
   },
   {
     id: 8,
-    title: "Rap",
+    title: "Rap songs",
     description: "Rap songs",
     img: "https://i.scdn.co/image/ab6761610000e5eb8d5a3c1484efc04752acabf8",
     color: "#F48444",
@@ -1057,7 +1057,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a2",
@@ -1067,7 +1067,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a3",
@@ -1077,7 +1077,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a4",
@@ -1087,7 +1087,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a5",
@@ -1097,7 +1097,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a6",
@@ -1107,7 +1107,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a7",
@@ -1117,7 +1117,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a8",
@@ -1127,7 +1127,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a9",
@@ -1137,7 +1137,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a10",
@@ -1147,7 +1147,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a11",
@@ -1157,7 +1157,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a12",
@@ -1167,7 +1167,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a13",
@@ -1177,7 +1177,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
       {
         id: "8a14",
@@ -1187,13 +1187,13 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Rap songs",
       },
     ],
   },
   {
     id: 9,
-    title: "XXXTentacion",
+    title: "Piano",
     description: "Beautiful songs by XXXTentacion",
     img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Xxxtentacion_%28cropped%29.jpg",
     color: "#A649EE",
@@ -1206,7 +1206,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a2",
@@ -1216,7 +1216,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a3",
@@ -1226,7 +1226,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a4",
@@ -1236,7 +1236,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a5",
@@ -1246,7 +1246,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a6",
@@ -1256,7 +1256,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a7",
@@ -1266,7 +1266,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a8",
@@ -1276,7 +1276,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a9",
@@ -1286,7 +1286,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a10",
@@ -1296,7 +1296,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a11",
@@ -1306,7 +1306,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a12",
@@ -1316,7 +1316,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a13",
@@ -1326,7 +1326,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
       {
         id: "9a14",
@@ -1336,7 +1336,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-          isLike: false,
+        albumName: "Piano",
       },
     ],
   },
