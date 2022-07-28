@@ -1,28 +1,23 @@
+import styles from "./home.styles.module.scss";
 import SongAlbumCard from "../../component/song-album-card/songAlbumCard";
-import { Grid } from "../../styles-components/grid";
 import { album } from "../../utils/data/album";
 import { Title } from "../../styles-components/text";
 
 function Home() {
   return (
-    <div
-      style={{
-        padding: "2rem",
-      }}
-    >
+    <div className={styles.HomeBox}>
       <Title size="medium">Top music</Title>
-      <Grid width="170px">
+      <div className={styles.HomeBoxGrid}>
         {album.map((item, index) => (
           <SongAlbumCard key={index} data={item} />
         ))}
-      </Grid>
-      <br/>
+      </div>
       <Title size="medium">Hip-Hop</Title>
-      <Grid width="170px">
+      <div className={styles.HomeBoxGrid}>
         {album.map((item, index) => (
           <SongAlbumCard key={index} data={item} />
         ))}
-      </Grid>
+      </div>
     </div>
   );
 }

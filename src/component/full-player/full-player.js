@@ -28,38 +28,39 @@ function FullPlayer() {
     });
   }, [player]);
   return (
-    <div
-      className={styles.FullPlayerBox}
-      ref={player}
-      style={{ backgroundImage: `url(${imgUrl})` }}
-    >
-      <div className={styles.FullPlayerBoxTopBack}>
-        <Btn
-          type="link"
-          onClick={() => {
-            closeFunc();
-          }}
-        >
-          <Back width="32" height="32" />
-        </Btn>
-      </div>
-      <div className={styles.FullPlayerBoxTopLike}>
-        <Like data={currentMusic} />
-      </div>
-      <div className={styles.FullPlayerBoxGridShadow}></div>
-      <div className={styles.FullPlayerBoxGrid}>
-        <div className={styles.FullPlayerBoxTitle}>
-          <Title size="medium" line={1}>
-            {title}
-          </Title>
-          <Description line={1}>{artist}</Description>
+    <div className={styles.FullPlayerBox} ref={player}>
+      <div
+        className={styles.FullPlayerBoxContainer}
+        style={{ backgroundImage: `url(${imgUrl})` }}
+      >
+          <div className={styles.FullPlayerBoxGridShadow}></div>
+        <div className={styles.FullPlayerBoxTopBack}>
+          <Btn
+            type="link"
+            onClick={() => {
+              closeFunc();
+            }}
+          >
+            <Back width="32" height="32" />
+          </Btn>
         </div>
-        <div className={styles.FullPlayerBoxInfo}>
-          <img src={imgUrl} alt="img" />
-          <Options isFullScreen={false} />
+        <div className={styles.FullPlayerBoxTopLike}>
+          <Like data={currentMusic} />
         </div>
-        <div className={styles.FullPlayerBoxAction}>
-          <Control />
+        <div className={styles.FullPlayerBoxGrid}>
+          <div className={styles.FullPlayerBoxTitle}>
+            <Title size="medium" line={1}>
+              {title}
+            </Title>
+            <Description line={1}>{artist}</Description>
+          </div>
+          <div className={styles.FullPlayerBoxInfo}>
+            <img src={imgUrl} alt="img" />
+            <Options isFullScreen={false} />
+          </div>
+          <div className={styles.FullPlayerBoxAction}>
+            <Control />
+          </div>
         </div>
       </div>
     </div>

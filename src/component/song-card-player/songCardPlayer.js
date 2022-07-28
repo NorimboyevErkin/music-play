@@ -12,6 +12,7 @@ import {
 } from "../../utils/context";
 import { Title } from "../../styles-components/text";
 import { useTranslation } from "react-i18next";
+import Loading from "../loading/loading";
 
 function SongCardPlayer() {
   const { t } = useTranslation();
@@ -43,7 +44,7 @@ function SongCardPlayer() {
   const { volume, setvolume } = curVolume;
   const { speed, setspeed } = curSpeed;
   const { id, imgUrl, title, artist, audioUrl } = currentMusic;
-console.log(id, "id");
+  console.log(id, "id");
   // put music src
   useEffect(() => {
     const changeMusic = async () => {

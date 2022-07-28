@@ -746,7 +746,7 @@ export const album = [
   },
   {
     id: 6,
-    title: "XXXTentacion",
+    title: "Gafur",
     description: "Beautiful songs by XXXTentacion",
     img: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Xxxtentacion_%28cropped%29.jpg",
     color: "#AF2896",
@@ -759,7 +759,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a2",
@@ -769,7 +769,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502375978/bedtime_stories_bywggz.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502375674/Bedtime_Stories.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a3",
@@ -779,7 +779,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444304/actor_umzdur.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444212/Actor_ud8ccw.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a4",
@@ -789,7 +789,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444306/Bridge_of_Fate_o36rem.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444215/Bridge_of_Fate_aaksg1.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a5",
@@ -799,7 +799,7 @@ export const album = [
           "http://res.cloudinary.com/alick/image/upload/v1502444310/Goodbye_hpubmk.jpg",
         audioUrl:
           "http://res.cloudinary.com/alick/video/upload/v1502444222/Goodbye_byaom5.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a6",
@@ -809,7 +809,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a7",
@@ -819,7 +819,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a8",
@@ -829,7 +829,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a9",
@@ -839,7 +839,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a10",
@@ -849,7 +849,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a11",
@@ -859,7 +859,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a12",
@@ -869,7 +869,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a13",
@@ -879,7 +879,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
       {
         id: "6a14",
@@ -889,7 +889,7 @@ export const album = [
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
         audioUrl:
           "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-        albumName: "XXXTentacion",
+        albumName: "Gafur",
       },
     ],
   },

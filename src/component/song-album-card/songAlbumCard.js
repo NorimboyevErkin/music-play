@@ -4,7 +4,6 @@ import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songAlbumCard.styles.module.scss";
 import { CurrentMusic, CurrentAlbum, LibraryAlbum } from "../../utils/context";
-// import { ImgCard } from "../../styles-components/img-card";
 import { useNavigate } from "react-router-dom";
 function SongAlbumCard({ data }) {
   const { id, title, description, img, songs } = data;
@@ -26,6 +25,7 @@ function SongAlbumCard({ data }) {
     if (status === "play") {
       await setcurrentAlbumSongsIndex(0);
       await setcurrentAlbum(data);
+      await setlibraryAlbum(data);
       await setcurrentMusic(songs[0]);
       setisPlay(true);
     }
@@ -33,7 +33,7 @@ function SongAlbumCard({ data }) {
 
   const goToLibrary = async () => {
     await setlibraryAlbum(data);
-    // await setcurrentAlbum(data);
+    await setcurrentAlbum(data);
     navigate("/library");
   };
 
@@ -53,7 +53,6 @@ function SongAlbumCard({ data }) {
       }}
     >
       <div className={styles.songCardBoxHeader}>
-        {/* <ImgCard imgUrl={imgUrl} height="medium" width="medium" border="4px" /> */}
         <img src={img} alt="img" />
         {play ? (
           <Btn

@@ -2,7 +2,6 @@ import { useContext, memo } from "react";
 import styles from "./search.styles.module.scss";
 import CategoryCard from "../../component/category-card/category-card";
 import Input from "../../component/input";
-import { Grid } from "../../styles-components/grid";
 import { album } from "../../utils/data/album";
 import { SearchValue } from "../../utils/context";
 
@@ -13,20 +12,15 @@ function Search() {
     return item.title.toLowerCase().includes(search.toLowerCase());
   });
   return (
-    <div
-      style={{
-        padding: "2rem",
-      }}
-    >
-      <div className={styles.InputBox}>
+    <div className={styles.SearchBox}>
+      <div className={styles.SearchInputBox}>
         <Input onChange={setsearch} value={search} />
       </div>
-      <br />
-      <Grid width="164px">
+      <div className={styles.SearchGridBox}>
         {searchFilter.map((item, index) => (
           <CategoryCard key={index} data={item} />
         ))}
-      </Grid>
+      </div>
     </div>
   );
 }

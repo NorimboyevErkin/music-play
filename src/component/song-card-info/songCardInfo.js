@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { ImgCard } from "../../styles-components/img-card";
 import { Description, Title } from "../../styles-components/text";
+import Loading from "../loading/loading";
 import styles from "./songCardInfo.styles.module.scss";
 function SongCardInfo({ imgUrl, title, artist }) {
   return (

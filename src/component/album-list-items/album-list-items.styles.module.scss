@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 4fr 3fr 3fr;
   @media (max-width: 650px) {
-    grid-template-columns: 4fr 3fr;
+    grid-template-columns: 4fr 1fr;
   }
   padding: 0.4rem 1rem;
   @media (max-width: 500px) {
