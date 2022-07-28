@@ -8,6 +8,7 @@ import {
   MusicOptions,
   LikedSongsList,
   SearchValue,
+  LibraryAlbum,
 } from "./utils/context";
 import Error404 from "./pages/Error404";
 import Home from "./pages/home";
@@ -71,11 +72,14 @@ function App() {
   // MusicOptions
   const [isShuffle, setisShuffle] = useState(false);
   const [isRepeat, setisRepeat] = useState(false);
+  // LibraryAlbum
+  const [libraryAlbum, setlibraryAlbum] = useState(null);
   // CurrentMusic
   const [currentTime, setCurrentTime] = useState(0);
   const [durationTime, setdurationTime] = useState(0);
   const [seekValue, setSeekValue] = useState(0);
   const [currentMusic, setcurrentMusic] = useState({
+    id: null,
     imgUrl: null,
     title: null,
     description: null,
@@ -110,37 +114,39 @@ function App() {
                 },
               }}
             >
-              <MusicOptions.Provider
-                value={{
-                  shuffle: { isShuffle, setisShuffle },
-                  repeat: { isRepeat, setisRepeat },
-                }}
-              >
-                <CurrentMusic.Provider
+              <LibraryAlbum.Provider value={{ libraryAlbum, setlibraryAlbum }}>
+                <MusicOptions.Provider
                   value={{
-                    curMusic: { currentMusic, setcurrentMusic },
-                    curPlay: { isPlay, setisPlay },
-                    curTime: { currentTime, setCurrentTime },
-                    curSeekValue: { seekValue, setSeekValue },
-                    curDrationTime: { durationTime, setdurationTime },
-                    curVolume: { volume, setvolume },
-                    curSpeed: { speed, setspeed },
+                    shuffle: { isShuffle, setisShuffle },
+                    repeat: { isRepeat, setisRepeat },
                   }}
                 >
-                  <SearchValue.Provider value={{ search, setsearch }}>
-                    <Layout>
-                      <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/search" element={<Search />} />
-                        <Route path="/library" element={<Library />} />
-                        <Route path="/play-list" element={<PlayList />} />
-                        <Route path="/liked-songs" element={<LikedSongs />} />
-                        <Route path="*" element={<Error404 />} />
-                      </Routes>
-                    </Layout>
-                  </SearchValue.Provider>
-                </CurrentMusic.Provider>
-              </MusicOptions.Provider>
+                  <CurrentMusic.Provider
+                    value={{
+                      curMusic: { currentMusic, setcurrentMusic },
+                      curPlay: { isPlay, setisPlay },
+                      curTime: { currentTime, setCurrentTime },
+                      curSeekValue: { seekValue, setSeekValue },
+                      curDrationTime: { durationTime, setdurationTime },
+                      curVolume: { volume, setvolume },
+                      curSpeed: { speed, setspeed },
+                    }}
+                  >
+                    <SearchValue.Provider value={{ search, setsearch }}>
+                      <Layout>
+                        <Routes>
+                          <Route path="/" element={<Home />} />
+                          <Route path="/search" element={<Search />} />
+                          <Route path="/library" element={<Library />} />
+                          <Route path="/play-list" element={<PlayList />} />
+                          <Route path="/liked-songs" element={<LikedSongs />} />
+                          <Route path="*" element={<Error404 />} />
+                        </Routes>
+                      </Layout>
+                    </SearchValue.Provider>
+                  </CurrentMusic.Provider>
+                </MusicOptions.Provider>
+              </LibraryAlbum.Provider>
             </CurrentAlbum.Provider>
           </AudioMusic.Provider>
         </LikedSongsList.Provider>

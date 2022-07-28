@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import Status from "../../component/status/status";
-import { CurrentAlbum } from "../../utils/context";
+import { CurrentAlbum, LibraryAlbum } from "../../utils/context";
 import AlbumListItemPage from "../song-list-item-page/album-list-item-page";
 
 function Library() {
-  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
-  const { currentAlbum, setcurrentAlbum } = curAlbum;
+  const { curAlbum } = useContext(CurrentAlbum);
+  const { libraryAlbum, setlibraryAlbum } = useContext(LibraryAlbum);
+  const { currentAlbum } = curAlbum;
   return (
     <>
-      {currentAlbum ? (
-        <AlbumListItemPage album={currentAlbum} />
+      {libraryAlbum ? (
+        <AlbumListItemPage album={libraryAlbum} />
       ) : (
         <Status status="not-found" />
       )}

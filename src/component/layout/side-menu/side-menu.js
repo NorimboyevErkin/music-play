@@ -1,5 +1,5 @@
 import React, { useRef, useContext, useEffect, memo } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   Home,
   HomeFill,
@@ -20,9 +20,9 @@ function SideMenu() {
   const { pathname } = useLocation();
   const dropMenu = useRef();
   const Shadow = useRef();
-
+  const navigate = useNavigate();
   const { dropSide } = useContext(DropMenu);
-  const { setOpenDropMenu} = dropSide;
+  const { setOpenDropMenu } = dropSide;
   const openFunc = () => {
     dropMenu.current.style.left = "0";
     Shadow.current.style.display = "inline-block";
@@ -39,6 +39,11 @@ function SideMenu() {
     });
   }, [dropMenu]);
 
+  const goOtherPage = (page) => {
+    navigate(page);
+    closeFunc();
+  };
+
   return (
     <>
       <div
@@ -48,74 +53,72 @@ function SideMenu() {
       ></div>
       <div className={styles.SideMenuBox} ref={dropMenu}>
         <div className={styles.SideMenuBoxLogo}>
-          <Logo />
+          <Logo onClick={() => goOtherPage("/")} />
         </div>
         <div className={styles.SideMenuBoxNavbar}>
           <ul>
-            <li>
+            <li onClick={() => goOtherPage("/")}>
               {pathname === "/" || pathname === "" || pathname === "/#" ? (
-                <NavLink to="/" className={styles.activeLink}>
+                <a className={styles.activeLink}>
                   <HomeFill color="var(--white-text)" />
                   {t("Home")}
-                </NavLink>
+                </a>
               ) : (
-                <NavLink to="/">
+                <a>
                   <Home color="var(--white-text)" />
                   {t("Home")}
-                </NavLink>
+                </a>
               )}
             </li>
-            <li>
+            <li onClick={() => goOtherPage("/search")}>
               {pathname.startsWith("/search") ? (
-                <NavLink to="/search" className={styles.activeLink}>
+                <a className={styles.activeLink}>
                   <SearchFill color="var(--white-text)" />
                   {t("Search")}
-                </NavLink>
+                </a>
               ) : (
-                <NavLink to="/search">
+                <a>
                   <Search color="var(--white-text)" />
                   {t("Search")}
-                </NavLink>
+                </a>
               )}
             </li>
-            <li>
+            <li onClick={() => goOtherPage("/library")}>
               {pathname.startsWith("/library") ? (
-                <NavLink to="/library" className={styles.activeLink}>
+                <a className={styles.activeLink}>
                   <LibraryFill color="var(--white-text)" />
                   {t("Library")}
-                </NavLink>
+                </a>
               ) : (
-                <NavLink to="/library">
+                <a>
                   <Library color="var(--white-text)" />
                   {t("Library")}
-                </NavLink>
+                </a>
               )}
             </li>
           </ul>
         </div>
         <div className={styles.SideMenuBoxNavbarWrapper}>
           <ul>
-            <li>
-              <NavLink
-                to="/play-list"
+            <li onClick={() => goOtherPage("/play-list")}>
+              <a
                 className={
                   pathname.startsWith("/play-list") ? styles.activeLink : null
                 }
               >
                 <LibraryPlus color="var(--white-text)" />
                 {t("Play-list")}
-              </NavLink>
+              </a>
             </li>
-            <li>
-              <NavLink
-                to="/liked-songs"
+            <li onClick={() => goOtherPage("/liked-songs")}>
+              <a
                 className={
                   pathname.startsWith("/liked-songs") ? styles.activeLink : null
                 }
               >
                 <LikedSongsIcon />
                 {t("Liked_song")}
-              </NavLink>
+              </a>
             </li>
           </ul>
         </div>

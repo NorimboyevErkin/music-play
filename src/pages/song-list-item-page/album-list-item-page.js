@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Repeat, Shuffle } from "../../assets/icon/icon";
 import MyInput from "../../component/input/index";
 import ShowCase from "../../component/show-case/show-case";
@@ -8,12 +8,15 @@ import { Btn } from "../../styles-components/button";
 import styles from "./album-list-item-page.styles.module.scss";
 import { MdPauseCircleFilled, MdPlayCircleFilled } from "react-icons/md";
 import { CurrentMusic, CurrentAlbum, MusicOptions } from "../../utils/context";
-function AlbumListItemPage({ album }) {
-  const { title, description, img, songs } = album;
+
+function AlbumListItemPage({ page, album }) {
+  const { id, title, description, img, songs } = album;
   const [Search, setSearch] = useState("");
+  const [play, setplay] = useState(false);
   const { shuffle, repeat } = useContext(MusicOptions);
   const { curMusic, curPlay } = useContext(CurrentMusic);
   const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
   const { isShuffle, setisShuffle } = shuffle;
   const { isRepeat, setisRepeat } = repeat;
   const { isPlay, setisPlay } = curPlay;
@@ -25,6 +28,16 @@ function AlbumListItemPage({ album }) {
   const filterSongs = songs?.filter((item) => {
     return item.title.toLowerCase().includes(Search.toLowerCase());
   });
+  useEffect(() => {
+    isPlay && currentAlbum ? setplay(currentAlbum.id === id) : setplay(false);
+  }, [isPlay]);
+
+  const handlePlay = async () => {
+    await setcurrentAlbum(album);
+    await setcurrentAlbumSongsIndex(0);
+    await setcurrentMusic(songs[0]);
+    setisPlay(true);
+  };
 
   return (
     <div className={styles.AlbumListItemPageBox}>
@@ -34,7 +47,7 @@ function AlbumListItemPage({ album }) {
       <div className={styles.AlbumListItemPageSongs}>
         <div className={styles.AlbumListItemPageSongsAction}>
           <div className={styles.AlbumListItemPageSongsControll}>
-            {isPlay ? (
+            {play ? (
               <Btn
                 type="circle-primary"
                 height="60px"
@@ -53,8 +66,7 @@ function AlbumListItemPage({ album }) {
                 height="60px"
                 width="60px"
                 onClick={() => {
-                  setcurrentMusic(songs[0]);
-                  setisPlay(true);
+                  handlePlay();
                 }}
               >
                 <MdPlayCircleFilled
@@ -92,11 +104,11 @@ function AlbumListItemPage({ album }) {
               />
             </Btn>
           </div>
-          <MyInput onChange={setSearch}  />
+          <MyInput onChange={setSearch} />
         </div>
         <SongListItemTitle />
         {filterSongs?.map((item, index) => (
-          <SongListItem key={index} index={index} data={item} />
+          <SongListItem key={index} index={index} data={item} album={album} />
         ))}
       </div>
     </div>

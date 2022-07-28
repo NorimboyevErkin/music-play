@@ -25,9 +25,9 @@ function Options({
   };
   const menu = (
     <ul>
-      <li onClick={() => setspeed(0.5)}>0.5X speed</li>
-      <li onClick={() => setspeed(1)}>01X speed</li>
-      <li onClick={() => setspeed(1.5)}>1.5X speed</li>
+      <li onClick={() => changeSpeed(0.5)}>0.5X speed</li>
+      <li onClick={() => changeSpeed(1)}>01X speed</li>
+      <li onClick={() => changeSpeed(1.5)}>1.5X speed</li>
     </ul>
   );
 

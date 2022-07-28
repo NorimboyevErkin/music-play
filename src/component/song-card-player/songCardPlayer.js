@@ -42,11 +42,19 @@ function SongCardPlayer() {
   const { isPlay, setisPlay } = curPlay;
   const { volume, setvolume } = curVolume;
   const { speed, setspeed } = curSpeed;
-  const { imgUrl, title, artist, audioUrl } = currentMusic;
-
+  const { id, imgUrl, title, artist, audioUrl } = currentMusic;
+console.log(id, "id");
   // put music src
   useEffect(() => {
-    audioMusic.src = audioUrl;
+    const changeMusic = async () => {
+      await setisPlay(false);
+      audioMusic.src = audioUrl;
+      setisPlay(true);
+    };
+
+    if (currentMusic.audioUrl) {
+      changeMusic();
+    }
   }, [currentMusic]);
 
   // next ,prev
@@ -86,21 +94,17 @@ function SongCardPlayer() {
 
   // next
   const next = async () => {
-    await setisPlay(false);
     if (currentAlbum?.songs[currentAlbumSongsIndex + 1]) {
       await setcurrentAlbumSongsIndex(currentAlbumSongsIndex + 1);
     } else {
       await setcurrentAlbumSongsIndex(0);
     }
-    setisPlay(true);
   };
 
   const onShuffle = async () => {
-    await setisPlay(false);
     await setcurrentAlbumSongsIndex(
       Math.ceil(Math.random() * currentAlbum.songs.length - 1)
     );
-    setisPlay(true);
   };
   const onRepeat = async () => {
     await setisPlay(false);

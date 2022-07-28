@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { memo, useContext, useEffect, useRef } from "react";
 import { Back } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
@@ -14,7 +14,6 @@ function FullPlayer() {
   const { OpenFullPlayer, setOpenFullPlayer } = fullPlayer;
   const { currentMusic, setcurrentMusic } = curMusic;
   const { imgUrl, title, artist, audioUrl } = currentMusic;
-
   const closeFunc = () => {
     player.current.style.bottom = "-100%";
   };
@@ -67,4 +66,4 @@ function FullPlayer() {
   );
 }
 
-export default FullPlayer;
+export default memo(FullPlayer);

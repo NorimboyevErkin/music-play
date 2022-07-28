@@ -35,7 +35,7 @@ function Control() {
   const { durationTime, setdurationTime } = curDrationTime;
   const { seekValue, setSeekValue } = curSeekValue;
 
-  const handlePlay = async () => {
+  const handlePlay = () => {
     setisPlay(true);
   };
 
@@ -47,10 +47,10 @@ function Control() {
     audioMusic.currentTime = value;
   };
 
-  function formatSecondsAsTime(secs) {
-    var hr = Math.floor(secs / 3600);
-    var min = Math.floor((secs - hr * 3600) / 60);
-    var sec = Math.floor(secs - hr * 3600 - min * 60);
+  const formatSecondsAsTime = (second) => {
+    let hr = Math.floor(second / 3600);
+    let min = Math.floor((second - hr * 3600) / 60);
+    let sec = Math.floor(second - hr * 3600 - min * 60);
 
     if (min < 10) {
       min = "0" + min;
@@ -60,27 +60,23 @@ function Control() {
     }
 
     return min + ":" + sec;
-  }
+  };
 
   // prev
-  const handlePrev = async () => {
-    await setisPlay(false);
+  const handlePrev = () => {
     if (currentAlbum.songs[currentAlbumSongsIndex - 1]) {
-      await setcurrentAlbumSongsIndex(currentAlbumSongsIndex - 1);
+      setcurrentAlbumSongsIndex(currentAlbumSongsIndex - 1);
     } else {
-      await setcurrentAlbumSongsIndex(currentAlbum.songs.length - 1);
+      setcurrentAlbumSongsIndex(currentAlbum.songs.length - 1);
     }
-    setisPlay(true);
   };
   // next
-  const handleNext = async () => {
-    await setisPlay(false);
+  const handleNext = () => {
     if (currentAlbum?.songs[currentAlbumSongsIndex + 1]) {
-      await setcurrentAlbumSongsIndex(currentAlbumSongsIndex + 1);
+      setcurrentAlbumSongsIndex(currentAlbumSongsIndex + 1);
     } else {
-      await setcurrentAlbumSongsIndex(0);
+      setcurrentAlbumSongsIndex(0);
     }
-    setisPlay(true);
   };
   return (
     <>

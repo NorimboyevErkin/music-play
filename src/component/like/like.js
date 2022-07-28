@@ -1,14 +1,19 @@
-import React, { useState, memo, useContext } from "react";
+import React, { useState, memo, useContext, useEffect } from "react";
 import { Heart, HeartFill } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { LikedSongsList } from "../../utils/context";
 
 function Like({ data }) {
+
   const { likedMusic, likedMusicId } = useContext(LikedSongsList);
   const { likedSongs, setlikedSongs } = likedMusic;
   const { likedSongsId, setlikedSongsId } = likedMusicId;
 
-  const [like, setlike] = useState(likedSongsId.includes(data?.id));
+  const [like, setlike] = useState(likedSongsId.includes(data.id));
+
+  useEffect(() => {
+    setlike(likedSongsId.includes(data.id));
+  }, [likedSongs]);
 
   const likeChange = async () => {
     if (like) {

@@ -6,6 +6,7 @@
   flex-direction: column;
   overflow: hidden;
   background: var(--main-section-color);
+  
 }
 .LayoutSection {
   height: 100%;
@@ -14,6 +15,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   overflow-x: hidden;
+  margin-bottom: 85px;
 
   .LayoutMainWrapper {
     width: 100%;

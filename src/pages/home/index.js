@@ -1,4 +1,3 @@
-import styles from "./home.styles.module.scss";
 import SongAlbumCard from "../../component/song-album-card/songAlbumCard";
 import { Grid } from "../../styles-components/grid";
 import { album } from "../../utils/data/album";

@@ -3,12 +3,14 @@ import { Pause, Play } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
 import styles from "./songAlbumCard.styles.module.scss";
-import { CurrentMusic, CurrentAlbum } from "../../utils/context";
+import { CurrentMusic, CurrentAlbum, LibraryAlbum } from "../../utils/context";
 // import { ImgCard } from "../../styles-components/img-card";
 import { useNavigate } from "react-router-dom";
 function SongAlbumCard({ data }) {
   const { id, title, description, img, songs } = data;
   const { curMusic, curPlay } = useContext(CurrentMusic);
+  const { libraryAlbum, setlibraryAlbum } = useContext(LibraryAlbum);
+
   const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
   const { currentAlbum, setcurrentAlbum } = curAlbum;
   const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
@@ -21,16 +23,17 @@ function SongAlbumCard({ data }) {
 
   const controll = async (status) => {
     await setisPlay(false);
-    await setcurrentAlbumSongsIndex(0);
     if (status === "play") {
-     await setcurrentAlbum(data);
-     await setcurrentMusic(songs[0]);
+      await setcurrentAlbumSongsIndex(0);
+      await setcurrentAlbum(data);
+      await setcurrentMusic(songs[0]);
       setisPlay(true);
     }
   };
 
   const goToLibrary = async () => {
-    await setcurrentAlbum(data);
+    await setlibraryAlbum(data);
+    // await setcurrentAlbum(data);
     navigate("/library");
   };
 
