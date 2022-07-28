@@ -1,6 +1,5 @@
 .CategoryCardBox {
   min-height: 200px;
-
   position: relative;
   overflow: hidden;
   display: flex;
@@ -11,7 +10,7 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   @media (max-width: 500px) {
-    min-height: 110px;
+    min-height: 120px;
     padding: .5rem;
   }
   &:hover {
