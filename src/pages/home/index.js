@@ -1,24 +1,31 @@
+import React, { useContext } from "react";
 import styles from "./home.styles.module.scss";
 import SongAlbumCard from "../../component/song-album-card/songAlbumCard";
-import { album } from "../../utils/data/album";
 import { Title } from "../../styles-components/text";
+import Loading from "../../component/loading/loading";
+import { CurrentAlbum } from "../../utils/context";
 
 function Home() {
+  const { albums } = useContext(CurrentAlbum);
+  const { album, setalbum } = albums;
+
   return (
-    <div className={styles.HomeBox}>
-      <Title size="medium">Top music</Title>
-      <div className={styles.HomeBoxGrid}>
-        {album.map((item, index) => (
-          <SongAlbumCard key={index} data={item} />
-        ))}
-      </div>
-      <Title size="medium">Hip-Hop</Title>
-      <div className={styles.HomeBoxGrid}>
-        {album.map((item, index) => (
-          <SongAlbumCard key={index} data={item} />
-        ))}
-      </div>
-    </div>
+    <>
+      {album.length > 0 ? (
+        <div className={styles.HomeBox}>
+          <Title size="medium">All top music album</Title>
+          <div className={styles.HomeBoxGrid}>
+            {album.map((item, index) => (
+              <SongAlbumCard key={index} data={item} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className={styles.HomeLoading}>
+          <Loading />
+        </div>
+      )}
+    </>
   );
 }
 

@@ -18,9 +18,7 @@ function Layout({ children }) {
 
   return (
     <>
-      <main className={styles.Layout} 
-      // style={{ height: `${window.innerHeight}px` }}
-      >
+      <main className={styles.Layout}>
         <div className={styles.LayoutSection}>
           <SideMenu />
           <div className={styles.LayoutMainWrapper} ref={mainWrapper}>

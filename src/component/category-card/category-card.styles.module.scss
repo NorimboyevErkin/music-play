@@ -38,12 +38,12 @@
     width: 128px;
     height: 128px;
     right: -30px;
-    bottom: -5%;
+    bottom: -10%;
     box-shadow: var(--img-shadow);
 
     @media (max-width: 500px) {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       right: -20px;
       bottom: -10%;
     }

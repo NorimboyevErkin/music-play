@@ -44,7 +44,6 @@ function SongCardPlayer() {
   const { volume, setvolume } = curVolume;
   const { speed, setspeed } = curSpeed;
   const { id, imgUrl, title, artist, audioUrl } = currentMusic;
-  console.log(id, "id");
   // put music src
   useEffect(() => {
     const changeMusic = async () => {

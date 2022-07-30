@@ -14,7 +14,11 @@ function SongCardInfo({ imgUrl, title, artist }) {
           {title}
         </Title>
         <Description line={1} weight="bolder">
-          {artist}
+          {artist.map((item, index) => (
+            <span key={index} style={{ marginRight: "5px" }}>
+              {item}
+            </span>
+          ))}
         </Description>
       </div>
     </div>

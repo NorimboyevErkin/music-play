@@ -22,10 +22,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 ///////////////////////
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector"; // browswer eslab qoliw uchun
 import HttpApi from "i18next-http-backend"; // dynamic file bn iwlaw
 import useLocalStore from "./utils/data/useLocalStore";
+import getAlbum from "./utils/data/useGetData";
 
 i18n
   .use(initReactI18next)
@@ -67,6 +68,7 @@ function App() {
   // AudioMusic
   const audioMusic = useRef(new Audio());
   // CurrentAlbum
+  const [album, setalbum] = useLocalStore("album", []);
   const [currentAlbum, setcurrentAlbum] = useState(null);
   const [currentAlbumSongsIndex, setcurrentAlbumSongsIndex] = useState(0);
   // MusicOptions
@@ -90,6 +92,19 @@ function App() {
   const [speed, setspeed] = useState(audioMusic.current.playbackRate);
   // SearchValue
   const [search, setsearch] = useState("");
+
+  useEffect(() => {
+    getAlbum()
+      .then((data) => {
+        setalbum(data);
+      })
+      .catch(() => {
+        console.log("Loading");
+      });
+  }, []);
+
+  
+
   return (
     <>
       <DropMenu.Provider
@@ -107,6 +122,7 @@ function App() {
           <AudioMusic.Provider value={audioMusic.current}>
             <CurrentAlbum.Provider
               value={{
+                albums: { album, setalbum },
                 curAlbum: { currentAlbum, setcurrentAlbum },
                 curAlbumSongIndex: {
                   currentAlbumSongsIndex,
