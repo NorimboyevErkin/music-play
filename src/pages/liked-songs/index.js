@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import AlbumListItemPage from "../song-list-item-page/album-list-item-page";
 import Status from "../../component/status/status";
 import { LikedSongsList } from "../../utils/context";
-import { album } from "../../utils/data/album";
 
 function LikedSongs() {
   const { likedMusic, likedMusicId } = useContext(LikedSongsList);
