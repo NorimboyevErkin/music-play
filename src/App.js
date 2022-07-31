@@ -94,16 +94,16 @@ function App() {
   const [search, setsearch] = useState("");
 
   useEffect(() => {
-    getAlbum()
-      .then((data) => {
-        setalbum(data);
-      })
-      .catch(() => {
-        console.log("Loading");
-      });
+    if (album.length < 1) {
+      getAlbum()
+        .then((data) => {
+          setalbum(data);
+        })
+        .catch(() => {
+          console.log("Loading");
+        });
+    }
   }, []);
-
-  
 
   return (
     <>

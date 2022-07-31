@@ -27,6 +27,7 @@ function FullPlayer() {
       closeFunc: closeFunc,
     });
   }, [player]);
+
   return (
     <div className={styles.FullPlayerBox} ref={player}>
       <div

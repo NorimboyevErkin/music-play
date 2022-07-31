@@ -13,7 +13,7 @@ function Like({ data }) {
 
   useEffect(() => {
     setlike(likedSongsId.includes(data.id));
-  }, [likedSongs]);
+  }, [likedSongsId]);
 
   const likeChange = async () => {
     if (like) {

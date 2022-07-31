@@ -16,14 +16,16 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 2rem 1rem;
-
+    @media (max-width: 500px) {
+      padding: 2rem .5rem;
+    }
     .AlbumListItemPageSongsAction {
       width: 100%;
       display: flex;
       margin-bottom: 1rem;
       justify-content: space-between;
       align-items: center;
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         justify-content: center;
         align-items: center;
         flex-direction: column;

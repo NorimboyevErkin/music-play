@@ -12,8 +12,8 @@
   }
   column-gap: 2rem;
   .ShowCaseBoxImg {
-    max-width: 250px;
-    max-height: 250px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     box-shadow: var(--img-shadow);
   }
