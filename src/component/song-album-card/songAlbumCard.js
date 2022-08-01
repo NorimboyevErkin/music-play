@@ -33,7 +33,6 @@ function SongAlbumCard({ data }) {
 
   const goToLibrary = async () => {
     await setlibraryAlbum(data);
-    await setcurrentAlbum(data);
     navigate("/library");
   };
 

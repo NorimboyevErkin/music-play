@@ -94,6 +94,7 @@ function App() {
   const [search, setsearch] = useState("");
 
   const navigate = useNavigate();
+  
   useEffect(() => {
       getAlbum()
         .then((data) => {

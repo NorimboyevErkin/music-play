@@ -9,10 +9,10 @@ import {
   CurrentMusic,
   CurrentAlbum,
   MusicOptions,
+  LikedSongsList,
 } from "../../utils/context";
 import { Title } from "../../styles-components/text";
 import { useTranslation } from "react-i18next";
-import Loading from "../loading/loading";
 
 function SongCardPlayer() {
   const { t } = useTranslation();
@@ -31,6 +31,9 @@ function SongCardPlayer() {
   const { currentAlbum, setcurrentAlbum } = curAlbum;
   const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
     curAlbumSongIndex;
+
+  const { likedMusic, likedMusicId } = useContext(LikedSongsList);
+  const { likedSongsId, setlikedSongsId } = likedMusicId;
 
   const { shuffle, repeat } = useContext(MusicOptions);
   const { isShuffle, setisShuffle } = shuffle;
@@ -144,7 +147,10 @@ function SongCardPlayer() {
               <div className={styles.SongCardPlayerInfo}>
                 <SongCardInfo imgUrl={imgUrl} artist={artist} title={title} />
                 <div className={styles.SongCardPlayerLike}>
-                  <Like data={currentMusic} />
+                  <Like
+                    data={currentMusic}
+                    isLike={likedSongsId.includes(currentMusic.id)}
+                  />
                 </div>
               </div>
               <div className={styles.SongCardPlayerAction}>

@@ -3,8 +3,7 @@ import { Heart, HeartFill } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { LikedSongsList } from "../../utils/context";
 
-function Like({ data }) {
-
+function Like({ data , isLike }) {
   const { likedMusic, likedMusicId } = useContext(LikedSongsList);
   const { likedSongs, setlikedSongs } = likedMusic;
   const { likedSongsId, setlikedSongsId } = likedMusicId;
@@ -50,7 +49,7 @@ function Like({ data }) {
         likeChange();
       }}
     >
-      {like ? <HeartFill color="var(--green)" /> : <Heart />}
+      {isLike ? <HeartFill color="var(--green)" /> : <Heart />}
     </Btn>
   );
 }

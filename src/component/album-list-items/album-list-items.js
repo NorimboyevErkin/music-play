@@ -6,18 +6,26 @@ import Like from "../like/like";
 import Loading from "../loading/loading";
 import SongCardInfo from "../song-card-info/songCardInfo";
 import styles from "./album-list-items.styles.module.scss";
-import { CurrentMusic, CurrentAlbum } from "../../utils/context";
+import {
+  CurrentMusic,
+  CurrentAlbum,
+  LikedSongsList,
+} from "../../utils/context";
+
 function SongListItem({ data, index, album }) {
   const { id, imgUrl, audioUrl, title, artist, albumName } = data;
   const { curMusic, curPlay } = useContext(CurrentMusic);
-  const {curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
+  const { curAlbum, curAlbumSongIndex } = useContext(CurrentAlbum);
   const { currentAlbumSongsIndex, setcurrentAlbumSongsIndex } =
     curAlbumSongIndex;
-    const { currentAlbum, setcurrentAlbum } = curAlbum;
+  const { currentAlbum, setcurrentAlbum } = curAlbum;
   const { currentMusic, setcurrentMusic } = curMusic;
   const { isPlay, setisPlay } = curPlay;
 
   const [play, setplay] = useState(false);
+
+  const { likedMusic, likedMusicId } = useContext(LikedSongsList);
+  const { likedSongsId, setlikedSongsId } = likedMusicId;
 
   const controll = async (status) => {
     if (status === "play") {
@@ -59,7 +67,7 @@ function SongListItem({ data, index, album }) {
             <Play />
           </Btn>
         )}
-        <Like data={data} />
+        <Like data={data} isLike={likedSongsId.includes(id)} />
       </div>
     </div>
   );

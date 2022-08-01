@@ -9,7 +9,7 @@ import styles from "./album-list-item-page.styles.module.scss";
 import { MdPauseCircleFilled, MdPlayCircleFilled } from "react-icons/md";
 import { CurrentMusic, CurrentAlbum, MusicOptions } from "../../utils/context";
 
-function AlbumListItemPage({ page, album }) {
+function AlbumListItemPage({ album }) {
   const { id, title, description, img, songs } = album;
   const [Search, setSearch] = useState("");
   const [play, setplay] = useState(false);
@@ -30,7 +30,7 @@ function AlbumListItemPage({ page, album }) {
   });
   useEffect(() => {
     isPlay && currentAlbum ? setplay(currentAlbum.id === id) : setplay(false);
-  }, [isPlay]);
+  }, [isPlay, currentAlbum]);
 
   const handlePlay = async () => {
     await setcurrentAlbum(album);

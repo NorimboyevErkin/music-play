@@ -30,7 +30,6 @@ function Options({
       <li onClick={() => changeSpeed(1.5)}>1.5X speed</li>
     </ul>
   );
-
   return (
     <div className={styles.OptionsBox}>
       {isDropdown ? (
@@ -51,7 +50,7 @@ function Options({
               min={0}
               max={1}
               step={0.01}
-              defaultValue={volume}
+              value={volume}
             />
           </>
         ) : null}

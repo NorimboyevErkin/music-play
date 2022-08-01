@@ -2,7 +2,7 @@ import { memo, useContext, useEffect, useRef } from "react";
 import { Back } from "../../assets/icon/icon";
 import { Btn } from "../../styles-components/button";
 import { Description, Title } from "../../styles-components/text";
-import { CurrentMusic, DropMenu } from "../../utils/context";
+import { CurrentMusic, DropMenu, LikedSongsList } from "../../utils/context";
 import Control from "../control/control";
 import Like from "../like/like";
 import Options from "../options/options";
@@ -14,6 +14,11 @@ function FullPlayer() {
   const { OpenFullPlayer, setOpenFullPlayer } = fullPlayer;
   const { currentMusic, setcurrentMusic } = curMusic;
   const { imgUrl, title, artist, audioUrl } = currentMusic;
+
+  ///////////
+  const { likedMusic, likedMusicId } = useContext(LikedSongsList);
+  const { likedSongsId, setlikedSongsId } = likedMusicId;
+
   const closeFunc = () => {
     player.current.style.bottom = "-100%";
   };
@@ -34,7 +39,7 @@ function FullPlayer() {
         className={styles.FullPlayerBoxContainer}
         style={{ backgroundImage: `url(${imgUrl})` }}
       >
-          <div className={styles.FullPlayerBoxGridShadow}></div>
+        <div className={styles.FullPlayerBoxGridShadow}></div>
         <div className={styles.FullPlayerBoxTopBack}>
           <Btn
             type="link"
@@ -46,7 +51,10 @@ function FullPlayer() {
           </Btn>
         </div>
         <div className={styles.FullPlayerBoxTopLike}>
-          <Like data={currentMusic} />
+          <Like
+            data={currentMusic}
+            isLike={likedSongsId.includes(currentMusic.id)}
+          />
         </div>
         <div className={styles.FullPlayerBoxGrid}>
           <div className={styles.FullPlayerBoxTitle}>
