@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import {
   AudioMusic,
   CurrentMusic,
@@ -93,16 +93,15 @@ function App() {
   // SearchValue
   const [search, setsearch] = useState("");
 
+  const navigate = useNavigate();
   useEffect(() => {
-    if (album.length < 1) {
       getAlbum()
         .then((data) => {
           setalbum(data);
         })
         .catch(() => {
-          console.log("Loading");
+          navigate("/Error404");
         });
-    }
   }, []);
 
   return (

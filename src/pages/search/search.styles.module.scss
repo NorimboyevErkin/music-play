@@ -1,5 +1,8 @@
 .SearchBox {
-  padding: 1rem;
+  padding:2rem;
+  @media (max-width: 500px) {
+    padding:2rem 1rem;
+  }
   .SearchInputBox {
     margin-bottom: 1.5rem;
     @media (min-width: 550px) {
@@ -7,17 +10,16 @@
     }
   }
   .SearchGridBox {
-    padding: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
     grid-gap: 1rem;
 
     @media (max-width: 500px) {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
   }
 }
-.SearchLoading{
+.SearchLoading {
   width: 100%;
   height: calc(100vh - 142px);
 }
