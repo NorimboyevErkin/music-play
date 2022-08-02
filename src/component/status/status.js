@@ -41,7 +41,7 @@ function Status({ status }) {
         {title}
       </Title>
       <Description size="medium" align="center">
-        description description
+        各エラーの詳細については、キーワードを検索してください。
       </Description>
     </div>
   );

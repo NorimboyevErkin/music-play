@@ -68,7 +68,7 @@ function App() {
   // AudioMusic
   const audioMusic = useRef(new Audio());
   // CurrentAlbum
-  const [album, setalbum] = useLocalStore("album", []);
+  const [album, setalbum] = useState([]);
   const [currentAlbum, setcurrentAlbum] = useState(null);
   const [currentAlbumSongsIndex, setcurrentAlbumSongsIndex] = useState(0);
   // MusicOptions
@@ -94,15 +94,15 @@ function App() {
   const [search, setsearch] = useState("");
 
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-      getAlbum()
-        .then((data) => {
-          setalbum(data);
-        })
-        .catch(() => {
-          navigate("/Error404");
-        });
+    getAlbum()
+      .then((data) => {
+        setalbum(data);
+      })
+      .catch(() => {
+        navigate("/Error404");
+      });
   }, []);
 
   return (
