@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext , useEffect} from "react";
 import styles from "./home.styles.module.scss";
 import SongAlbumCard from "../../component/song-album-card/songAlbumCard";
 import { Title } from "../../styles-components/text";
@@ -8,7 +8,11 @@ import { CurrentAlbum } from "../../utils/context";
 function Home() {
   const { albums } = useContext(CurrentAlbum);
   const { album, setalbum } = albums;
-
+    useEffect(() => {
+      return () => {
+        window.scrollTo(0, 0);
+      };
+    }, []);
   return (
     <>
       {album.length > 0 ? (

@@ -31,6 +31,11 @@ function AlbumListItemPage({ album }) {
   useEffect(() => {
     isPlay && currentAlbum ? setplay(currentAlbum.id === id) : setplay(false);
   }, [isPlay, currentAlbum]);
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
 
   const handlePlay = async () => {
     await setcurrentAlbum(album);

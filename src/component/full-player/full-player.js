@@ -14,8 +14,6 @@ function FullPlayer() {
   const { OpenFullPlayer, setOpenFullPlayer } = fullPlayer;
   const { currentMusic, setcurrentMusic } = curMusic;
   const { imgUrl, title, artist, audioUrl } = currentMusic;
-
-  ///////////
   const { likedMusic, likedMusicId } = useContext(LikedSongsList);
   const { likedSongsId, setlikedSongsId } = likedMusicId;
 
@@ -61,7 +59,13 @@ function FullPlayer() {
             <Title size="medium" line={1}>
               {title}
             </Title>
-            <Description line={1}>{artist}</Description>
+            <Description line={1}>
+              {artist?.map((item, index) => (
+                <span key={index} style={{ marginRight: "5px" }}>
+                  {item}
+                </span>
+              ))}
+            </Description>
           </div>
           <div className={styles.FullPlayerBoxInfo}>
             <img src={imgUrl} alt="img" />

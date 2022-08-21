@@ -1,4 +1,4 @@
-import { useContext, memo } from "react";
+import { useContext, memo, useEffect } from "react";
 import styles from "./search.styles.module.scss";
 import CategoryCard from "../../component/category-card/category-card";
 import Input from "../../component/input";
@@ -14,6 +14,12 @@ function Search() {
   const searchFilter = album.filter((item) => {
     return item.title.toLowerCase().includes(search.toLowerCase());
   });
+
+  useEffect(() => {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }, []);
   return (
     <>
       {album.length > 0 ? (

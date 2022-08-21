@@ -13,7 +13,11 @@ function LikedSongs() {
     img: "https://misc.scdn.co/liked-songs/liked-songs-300.png",
     songs: likedSongs,
   };
-
+    useEffect(() => {
+      return () => {
+        window.scrollTo(0, 0);
+      };
+    }, []);
   return (
     <>
       {likedSongs.length > 0 ? (
